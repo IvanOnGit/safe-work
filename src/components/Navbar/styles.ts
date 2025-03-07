@@ -20,5 +20,6 @@ margin-right: 5.81rem;
 a {
     color: white;
     text-decoration: none;
+    font-family: 'Inter', sans-serif;
 }
 `;
