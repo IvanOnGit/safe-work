@@ -6,7 +6,7 @@ padding: 1rem;
 background-color: #001C3C;
 display: flex;
 align-items: center;
-height: 30rem;
+height: 40rem;
 justify-content: space-between;
 `;
 
@@ -14,6 +14,7 @@ export const TextContainer = styled.div`
     color: white;
     font-family: 'Inter', sans-serif;
     margin-left: 6rem;
+    margin-bottom: 7rem;
     h1 {
         font-size: 3rem;
         font-weight: 100;
@@ -26,8 +27,14 @@ export const TextContainer = styled.div`
 
 export const VideoContainer = styled.div`
     margin-right: 6rem;
+    margin-bottom: 7rem;
     img {
         width: 35rem;
         height: 20rem;
     }
+`;
+
+export const StyledSection = styled.section`
+    height: 40rem;
+    background-color: white;
 `;

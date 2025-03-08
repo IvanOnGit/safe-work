@@ -1,5 +1,6 @@
+import HowwCanWeHelpYou from '../HowCanWeHelpYou/HowCanWeHelpYou';
 import Navbar from '../Navbar/Navbar';
-import { Container, TextContainer, VideoContainer } from './styles';
+import { Container, StyledSection, TextContainer, VideoContainer } from './styles';
 
 function Home() {
   return (
@@ -15,7 +16,9 @@ function Home() {
         <VideoContainer>
           <img src="/images/HeroVideo.webp" alt="" />
         </VideoContainer>
+        <HowwCanWeHelpYou />
       </Container>
+      <StyledSection></StyledSection>
     </>
   );
 }
