@@ -1,6 +1,7 @@
+import BookAssestmentSection from '../BookAssestmentSection/BookAssestmentSection';
 import HowwCanWeHelpYou from '../HowCanWeHelpYou/HowCanWeHelpYou';
 import Navbar from '../Navbar/Navbar';
-import { Container, StyledSection, TextContainer, VideoContainer } from './styles';
+import { Container, TextContainer, VideoContainer } from './styles';
 
 function Home() {
   return (
@@ -18,7 +19,7 @@ function Home() {
         </VideoContainer>
         <HowwCanWeHelpYou />
       </Container>
-      <StyledSection></StyledSection>
+      <BookAssestmentSection />
     </>
   );
 }
