@@ -1,6 +1,7 @@
 import BookAssestmentSection from '../BookAssestmentSection/BookAssestmentSection';
 import HowwCanWeHelpYou from '../HowCanWeHelpYou/HowCanWeHelpYou';
 import Navbar from '../Navbar/Navbar';
+import OurServices from '../OurServices/OurServices';
 import { Container, TextContainer, VideoContainer } from './styles';
 
 function Home() {
@@ -20,6 +21,7 @@ function Home() {
         <HowwCanWeHelpYou />
       </Container>
       <BookAssestmentSection />
+      <OurServices />
     </>
   );
 }
