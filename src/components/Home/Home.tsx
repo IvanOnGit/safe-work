@@ -2,6 +2,7 @@ import BookAssestmentSection from '../BookAssestmentSection/BookAssestmentSectio
 import HowwCanWeHelpYou from '../HowCanWeHelpYou/HowCanWeHelpYou';
 import Navbar from '../Navbar/Navbar';
 import OurServices from '../OurServices/OurServices';
+import Recomendations from '../Recomendations/Recomendations';
 import { Container, TextContainer, VideoContainer } from './styles';
 
 function Home() {
@@ -22,6 +23,7 @@ function Home() {
       </Container>
       <BookAssestmentSection />
       <OurServices />
+      <Recomendations />
     </>
   );
 }

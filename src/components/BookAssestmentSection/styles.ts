@@ -6,7 +6,7 @@ export const Container = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 15rem;
+    margin-top: 20rem;
 `;
 
 export const TextContainer = styled.div`
