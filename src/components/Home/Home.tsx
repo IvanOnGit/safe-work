@@ -1,4 +1,5 @@
 import BookAssestmentSection from '../BookAssestmentSection/BookAssestmentSection';
+import Contact from '../Contact/Contact';
 import HowwCanWeHelpYou from '../HowCanWeHelpYou/HowCanWeHelpYou';
 import Navbar from '../Navbar/Navbar';
 import OurServices from '../OurServices/OurServices';
@@ -26,6 +27,7 @@ function Home() {
       <OurServices />
       <Recomendations />
       <WhyUs />
+      <Contact />
     </>
   );
 }

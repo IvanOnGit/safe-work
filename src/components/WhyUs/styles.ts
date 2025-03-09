@@ -25,6 +25,7 @@ export const TitleContainer = styled.div`
 export const WhyUsContainer = styled.div`
     display: flex;
     gap: 2rem;
+    margin-bottom: 2rem;
 
     img {
         height: 26rem;
