@@ -41,7 +41,7 @@ export const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin-right: 20rem;
-
+    width: 15rem;
     form {
         display: flex;
         flex-direction: column;
