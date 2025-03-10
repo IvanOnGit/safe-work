@@ -12,6 +12,22 @@ export const TextContainer = styled.div`
         padding: 0;
         margin-bottom: 3rem;
     }
+
+    .desktop-hide {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        text-align: left;
+        margin-left: 2rem;
+        .mobile-hide {
+            display: none;
+        }
+
+        .desktop-hide {
+            display: inline;
+        }
+    }
 `;
 
 export const Container = styled.section`
@@ -27,6 +43,22 @@ export const Container = styled.section`
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   font-family: 'Inter', sans-serif;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const MobileContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  gap: 2.5rem;
+
+@media (min-width: 768px) {
+    display: none;
+}
 `;
 
 export const ServiceCard = styled.div`
@@ -36,7 +68,7 @@ export const ServiceCard = styled.div`
   box-shadow: none;
   border-left: 1px solid #e0e0e0;
   padding: 1rem;
-
+  font-family: 'Inter', sans-serif;
 
 
   &:first-child {
@@ -50,6 +82,11 @@ export const ServiceCard = styled.div`
     border-bottom-right-radius: 1rem;
   }
 
+  @media (max-width: 768px) {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 1rem;
+    
+  }
 `;
 
 export const IconWrapper = styled.div`
@@ -67,6 +104,10 @@ export const Title = styled.h3`
   font-size: 1.5rem;
   color: #0d2538;
   margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 `;
 
 export const List = styled.ul`
@@ -83,5 +124,13 @@ export const List = styled.ul`
   font-size: 1.2rem;
   li {
     margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0;
+    margin-top: 1rem;
+    padding-left: 0;
+    margin-left: 4rem;
+    margin-right: 1rem;
   }
 `;

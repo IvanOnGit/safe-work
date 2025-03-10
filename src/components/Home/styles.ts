@@ -8,6 +8,11 @@ display: flex;
 align-items: center;
 height: 40rem;
 justify-content: space-between;
+
+@media (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+}
 `;
 
 export const TextContainer = styled.div`
@@ -23,6 +28,11 @@ export const TextContainer = styled.div`
         font-size: 1rem;
         word-spacing: 0.2rem;
     }
+
+    @media (max-width: 768px) {
+        margin-left: 1rem;
+        margin-bottom: 0;
+    }
 `;
 
 export const VideoContainer = styled.div`
@@ -31,6 +41,10 @@ export const VideoContainer = styled.div`
     img {
         width: 35rem;
         height: 20rem;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
     }
 `;
 

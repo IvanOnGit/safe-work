@@ -7,6 +7,10 @@ export const Container = styled.section`
     align-items: center;
     justify-content: space-between;
     margin-top: 20rem;
+
+    @media (max-width: 768px) {
+        height: 30rem;
+    }
 `;
 
 export const TextContainer = styled.div`
@@ -49,6 +53,15 @@ export const TextContainer = styled.div`
     color: white;
     transition: all 0.3s ease-in-out;
     }
+
+    @media (max-width: 768px) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+
+        .mobile-hide {
+            display: none;
+        }
+    }
 `;
 
 export const ImageContainer = styled.div`
@@ -61,5 +74,9 @@ export const ImageContainer = styled.div`
         height: 25rem;
         border-top-left-radius: 1rem;
         border-bottom-left-radius: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
     }
 `;

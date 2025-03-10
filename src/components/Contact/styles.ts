@@ -8,6 +8,11 @@ export const Container = styled.section`
     align-items: center;
     justify-content: space-between;
     margin-top: 1rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        height: auto;
+    }
 `;
 
 export const TextContainer = styled.div`
@@ -29,6 +34,11 @@ export const TextContainer = styled.div`
         font-weight: 100;
         margin: 0;
         padding: 0;
+    }
+
+    @media (max-width: 768px) {
+        margin-right: 2rem;
+        margin-left: 2rem;
     }
 `;
 
@@ -59,6 +69,10 @@ export const FormContainer = styled.div`
             padding: 0;
             font-size: 0.7rem;
             outline: none;
+
+            @media (max-width: 768px) {
+                font-size: 1rem;
+            }
         }
 
         textarea {
@@ -68,6 +82,10 @@ export const FormContainer = styled.div`
             resize: none;
             height: 10rem;
             outline: none;
+
+            @media (max-width: 768px) {
+                font-size: 1rem;
+            }
         }
 
         button {
@@ -79,5 +97,12 @@ export const FormContainer = styled.div`
             font-family: 'Inter', sans-serif;
             cursor: pointer;
         }
+    }
+
+    @media (max-width: 768px) {
+        margin-right: 2rem;
+        margin-left: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 `;

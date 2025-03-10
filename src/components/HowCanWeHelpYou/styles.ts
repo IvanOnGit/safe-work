@@ -20,6 +20,13 @@ font-family: 'Inter', sans-serif;
 gap: 2rem;
 color: #001C3C;
 text-align: center;
+
+@media (max-width: 768px) {
+  margin-top: 23rem;
+  width: 18rem;
+  height: 28rem;
+  display: none;
+}
 `;
 
 export const TextContainer = styled.div`
@@ -40,6 +47,7 @@ h2 {
     font-size: 1rem;
     font-weight: 100;
 }
+
 `;
 
 export const ButtonsContainer = styled.div`

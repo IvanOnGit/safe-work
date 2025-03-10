@@ -10,9 +10,9 @@ function Recomendations() {
         <RecomendationsContainer>
         <TextContainer>
             <p>
-             Desde que contacté a SafeWork, he recuperado la confianza y la claridad para enfrentar mi <br />
-             situación. Su orientación profesionaly apoyo constante me han dado las herramientas necesarias <br />
-             para actuar con seguridad. Ahora, me siento acompañada en cada paso y veo un camino real <br />
+             Desde que contacté a SafeWork, he recuperado la confianza y la claridad para enfrentar mi <span className="mobile-hide"><br /></span>
+             situación. Su orientación profesionaly apoyo constante me han dado las herramientas necesarias <span className="mobile-hide"><br /></span>
+             para actuar con seguridad. Ahora, me siento acompañada en cada paso y veo un camino real <span className="mobile-hide"><br /></span>
              hacia una solución.
             </p>
         </TextContainer>

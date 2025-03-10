@@ -18,10 +18,19 @@ export const Step = styled.div<StepProps>`
     ${(props) => (props.active || props.completed ? "#007bff" : "#ccc")};
   color: ${(props) => (props.active || props.completed ? "#007bff" : "#001C3C")};
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 export const Line = styled.div<{ completed?: boolean }>`
   width: 50px;
   height: 2px;
   background-color: ${(props) => (props.completed ? "#007bff" : "#ccc")};
+
+  @media (max-width: 768px) {
+    width: 25px;
+  }
 `;

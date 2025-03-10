@@ -8,6 +8,14 @@ export const Container = styled.section`
     justify-content: center;
     flex-direction: column;
     margin-top: 1rem;
+
+    @media (max-width: 768px) {
+        background-color: #E6E6E6;
+        top: 0;
+        margin-top: 3rem;
+        padding-top: 0;
+        height: auto;
+    }
 `;
 
 export const TitleContainer = styled.div`
@@ -19,6 +27,12 @@ export const TitleContainer = styled.div`
         font-size: 1.5rem;
         font-family: 'Inter', sans-serif;
         color: #001C3C;
+    }
+
+    @media (max-width: 768px) {
+        margin-right: 1rem;
+        margin-left: 2rem;
+        
     }
 `;
 
@@ -32,6 +46,18 @@ export const WhyUsContainer = styled.div`
         width: 25rem;
         object-fit: cover;
         object-position: center;
+
+        @media (max-width: 768px) {
+            height: 20rem;
+            width: 20rem;
+            align-self: center;
+            margin-bottom: 3rem;
+            border-radius: 1rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
     }
 `;
 
@@ -57,5 +83,18 @@ export const TextContainer = styled.div`
         font-family: 'Inter', sans-serif;
         cursor: pointer;
         width: 10rem;
+
+        @media (max-width: 768px) {
+            position: absolute;
+            margin-top: 56.5rem;
+            width: 20rem;
+            align-self: center;
+            padding: 1rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 `;

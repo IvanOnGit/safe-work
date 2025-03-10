@@ -15,6 +15,10 @@ export const Container = styled.section`
         margin: 0;
         padding: 0;
     }
+
+    @media (max-width: 768px) {
+        height: 50rem;
+    }
 `;
 
 export const TitleContainer = styled.div`
@@ -24,6 +28,12 @@ export const TitleContainer = styled.div`
 
     h1 {
         font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+        margin-top: 3rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
     }
 `;
 
@@ -35,21 +45,48 @@ export const RecomendationsContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    @media (max-width: 768px) {
+        padding: 1rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
 `;
 
 export const TextContainer = styled.div`
     font-family: 'Inter', sans-serif;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+
+        .mobile-hide {
+            display: none;
+        }
+    }
 `;
 
 export const PersonAndLogoContainer = styled.div`
     display: flex;
     justify-content: space-between;
+
+    
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+    }
 `;
 
 export const PersonContainer = styled.div`
     display: flex;
     gap: 2rem;
     align-items: center;
+
+    
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+    }
 `;
 
 export const ProfileImage = styled.img`
@@ -78,6 +115,12 @@ export const NameOcupationAndStars = styled.div`
         padding: 0;
         font-size: 1rem;
         font-weight: 100;
+    }
+
+    @media (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 `;
 
