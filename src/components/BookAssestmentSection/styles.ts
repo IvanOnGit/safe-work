@@ -9,7 +9,7 @@ export const Container = styled.section`
     margin-top: 20rem;
 
     @media (max-width: 768px) {
-        height: 30rem;
+        height: 40rem;
     }
 `;
 
@@ -46,6 +46,10 @@ export const TextContainer = styled.div`
     padding: 1rem;
     border-radius: 1rem;
     cursor: pointer;
+    
+    @media (max-width: 768px) {
+        margin-bottom: 1rem;
+    }
     }
 
     button:hover {
@@ -57,6 +61,7 @@ export const TextContainer = styled.div`
     @media (max-width: 768px) {
         margin-left: 2rem;
         margin-right: 2rem;
+        margin-top: 5rem;
 
         .mobile-hide {
             display: none;

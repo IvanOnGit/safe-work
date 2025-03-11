@@ -22,10 +22,8 @@ color: #001C3C;
 text-align: center;
 
 @media (max-width: 768px) {
-  margin-top: 23rem;
   width: 18rem;
-  height: 28rem;
-  display: none;
+  height: auto;
 }
 `;
 
@@ -110,6 +108,22 @@ export const FormContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .input-group {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+
+      input {
+        width: 80%;
+      }
+    }
+
+    .button-group {
+      flex-direction: column;
+    }
   }
 `;
 
