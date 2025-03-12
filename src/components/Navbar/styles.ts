@@ -46,16 +46,24 @@ export const MenuButton = styled.button`
   }
 `;
 
-export const MobileMenu = styled.div`
+export const MobileMenu = styled.div<{ isOpen: boolean }>`
   position: absolute;
   top: 100%;
+  left: 0;
+  width: 100%;
   background-color: #001c3c;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
-  width: 100%;
   text-align: left;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+  /* Animación */
+  transform: ${({ isOpen }) => (isOpen ? "translateY(0)" : "translateY(-20px)")};
+  opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
+  pointer-events: ${({ isOpen }) => (isOpen ? "auto" : "none")}; /* Evita clics cuando está oculto */
+
   a {
     color: white;
     text-decoration: none;

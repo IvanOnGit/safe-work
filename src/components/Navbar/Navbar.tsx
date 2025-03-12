@@ -15,6 +15,7 @@ function Navbar() {
         inline: 'nearest'
       });
     }
+    setIsOpen(false);
   };
 
   const handleScrollToTopMobile = (target: string) => {
@@ -26,6 +27,7 @@ function Navbar() {
         inline: 'nearest'
       });
     }
+    setIsOpen(false);
   };
 
   return (
@@ -38,18 +40,20 @@ function Navbar() {
         <a href="#why-us" onClick={(e) => handleScroll(e, 'why-us')}>Sobre Nosotros</a>
         <a href="#contact" onClick={(e) => handleScroll(e, 'contact')}>Contacto</a>
       </ContainerLinks>
+      
+      {/* Botón para abrir/cerrar menú en mobile */}
       <MenuButton onClick={() => setIsOpen(!isOpen)}>
         <Menu color="white" size={32} />
       </MenuButton>
-      {isOpen && (
-        <MobileMenu>
-          <a href="#home" onClick={(e) => handleScroll(e, 'home')}>Inicio</a>
+      
+      {/* Menú mobile con animación */}
+      <MobileMenu isOpen={isOpen}>
+        <a href="#home" onClick={(e) => handleScroll(e, 'home')}>Inicio</a>
         <a href="#how-can-we-help-you" onClick={(e) => handleScroll(e, 'how-can-we-help-you')}>Cómo podemos ayudarte</a>
         <a href="#recomendations" onClick={() => handleScrollToTopMobile('recomendations')}>Casos de éxito</a>
         <a href="#why-us" onClick={() => handleScrollToTopMobile('why-us')}>Sobre Nosotros</a>
         <a href="#contact" onClick={() => handleScrollToTopMobile('contact')}>Contacto</a>
-        </MobileMenu>
-      )}
+      </MobileMenu>
     </Container>
   );
 }
