@@ -29,11 +29,23 @@ function Contact() {
   return (
     <>
       <Container>
-        <TextContainer>
-          <h1>Querémos conocer tu situación, <br /> entremos en contácto</h1>
-          <p>Para nosotros cada historia es importante, por eso trabajamos de <br /> cerca con nuestros clientes, acompañándoles en cada parte del <br /> camino.</p>
-          <p>¿Te gustaría escribirnos por WhatsApp? ¡Haz click Aquí!</p>
-        </TextContainer>
+      <TextContainer>
+        <h1>Queremos conocer tu situación, <br /> entremos en contacto</h1>
+        <p>
+          Para nosotros cada historia es importante, por eso trabajamos de <br />
+          cerca con nuestros clientes, acompañándoles en cada parte del <br /> camino.
+        </p>
+        <p>
+          ¿Te gustaría escribirnos por WhatsApp?{" "}
+          <a 
+            href="https://wa.me/34622377041?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios." 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            ¡Haz click Aquí!
+          </a>
+        </p>
+      </TextContainer>
         <FormContainer>
           <form onSubmit={handleSubmit}>
             <input
