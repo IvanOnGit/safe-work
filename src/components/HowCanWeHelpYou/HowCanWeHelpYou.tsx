@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Stepper from '../Stepper/Stepper';
 import { ButtonsContainer, Container, FormContainer, Input, NextButton, SubmitButton, TextContainer } from './styles';
 
-function HowwCanWeHelpYou() {
+function HowCanWeHelpYou() {
   const [currentStep, setCurrentStep] = useState(1);
   const [answers, setAnswers] = useState<string[]>([]);
   const [formData, setFormData] = useState({ firstName: '', lastName: '', email: '', phone: '', newsletter: true });
@@ -33,7 +33,7 @@ function HowwCanWeHelpYou() {
   };
 
   return (
-    <Container>
+    <Container id="how-can-we-help-you">
       <Stepper currentStep={currentStep} />
 
       {currentStep === 1 && (
@@ -117,4 +117,4 @@ function HowwCanWeHelpYou() {
   );
 }
 
-export default HowwCanWeHelpYou;
+export default HowCanWeHelpYou;

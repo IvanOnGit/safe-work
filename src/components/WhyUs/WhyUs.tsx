@@ -2,7 +2,7 @@ import { Container, TextContainer, TitleContainer, WhyUsContainer } from './styl
 function WhyUs() {
   return (
     <>
-      <Container>
+      <Container id="why-us">
         <TitleContainer>
             <h1>¿Por qué elegir SafeWork como la empresa que <br />te acompaña y te da soporte?</h1>
         </TitleContainer>

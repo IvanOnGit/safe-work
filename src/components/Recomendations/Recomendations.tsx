@@ -3,7 +3,7 @@ import { Container, NameOcupationAndStars, PersonAndLogoContainer, PersonContain
 function Recomendations() {
   return (
     <>
-      <Container>
+      <Container id="recomendations">
         <TitleContainer>
                   <h1>Ellos ya recuperaron su paz. Ahora es tu turno.</h1>
         </TitleContainer>

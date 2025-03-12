@@ -28,7 +28,7 @@ function Contact() {
 
   return (
     <>
-      <Container>
+      <Container id="contact">
       <TextContainer>
         <h1>Queremos conocer tu situación, <br /> entremos en contacto</h1>
         <p>
