@@ -27,10 +27,28 @@ function HowCanWeHelpYou() {
     });
   };
 
-  const handleSubmit = () => {
-    const allData = [...answers, formData];
-    console.log(allData);
-  };
+  const handleSubmit = async () => {
+    const allData = { answers, formData };
+
+    try {
+        const response = await fetch('http://localhost:3001/api/contact/help-request', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(allData),
+        });
+
+        if (response.ok) {
+            alert('¡Formulario enviado con éxito!');
+        } else {
+            alert('Hubo un error al enviar el formulario');
+        }
+    } catch (error) {
+        console.error('Error al enviar los datos:', error);
+        alert('Error de conexión con el servidor');
+    }
+};
 
   return (
     <Container id="how-can-we-help-you">
