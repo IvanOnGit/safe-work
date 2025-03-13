@@ -8,8 +8,23 @@ export const Container = styled.section`
     justify-content: space-between;
     margin-top: 20rem;
 
+    @media (min-width: 768px) {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    &.visible {
+        @media (min-width: 768px) {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     @media (max-width: 768px) {
         height: 40rem;
+        opacity: 1;
+        transform: none;
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {   
