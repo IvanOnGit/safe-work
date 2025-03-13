@@ -41,14 +41,12 @@ function Navbar() {
         <a href="#contact" onClick={(e) => handleScroll(e, 'contact')}>Contacto</a>
       </ContainerLinks>
       
-      {/* Botón para abrir/cerrar menú en mobile */}
       <MenuButton onClick={() => setIsOpen(!isOpen)}>
         <Menu color="white" size={32} />
       </MenuButton>
       
-      {/* Menú mobile con animación */}
       <MobileMenu isOpen={isOpen}>
-        <a href="#home" onClick={(e) => handleScroll(e, 'home')}>Inicio</a>
+        <a href="">Inicio</a>
         <a href="#how-can-we-help-you" onClick={(e) => handleScroll(e, 'how-can-we-help-you')}>Cómo podemos ayudarte</a>
         <a href="#recomendations" onClick={() => handleScrollToTopMobile('recomendations')}>Casos de éxito</a>
         <a href="#why-us" onClick={() => handleScrollToTopMobile('why-us')}>Sobre Nosotros</a>
