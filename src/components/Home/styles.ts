@@ -12,6 +12,7 @@ justify-content: space-between;
 @media (max-width: 768px) {
     width: 100%;
     flex-direction: column;
+    height: 35rem;
 }
 @media (min-width: 768px) and (max-width: 1024px) {   
     height: 35rem;
@@ -34,6 +35,7 @@ export const TextContainer = styled.div`
 
     @media (max-width: 768px) {
         margin-left: 1rem;
+        margin-right: 1rem;
         margin-bottom: 0;
     }
 
