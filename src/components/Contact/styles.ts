@@ -64,7 +64,7 @@ export const FormContainer = styled.div`
             padding: 0.5rem;
             margin-bottom: 1rem;
             font-family: 'Inter', sans-serif;
-            color: #D9D9D9;
+            color: black;
             margin: 0;
             padding: 0;
             font-size: 0.7rem;
