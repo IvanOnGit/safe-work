@@ -11,6 +11,10 @@ export const Container = styled.section`
     @media (max-width: 768px) {
         height: 40rem;
     }
+
+    @media (min-width: 768px) and (max-width: 1024px) {   
+        height: 35rem;
+    }
 `;
 
 export const TextContainer = styled.div`
@@ -67,6 +71,12 @@ export const TextContainer = styled.div`
             display: none;
         }
     }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
 `;
 
 export const ImageContainer = styled.div`
@@ -83,5 +93,14 @@ export const ImageContainer = styled.div`
 
     @media (max-width: 768px) {
         display: none;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {   
+        img {
+            width: 20rem;
+            height: 20rem;
+            object-fit: cover;
+            object-position: center;
+        }
     }
 `;

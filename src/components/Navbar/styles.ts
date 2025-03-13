@@ -29,7 +29,7 @@ export const ContainerLinks = styled.div`
     font-family: "Inter", sans-serif;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 `;
@@ -40,9 +40,13 @@ export const MenuButton = styled.button`
   border: none;
   cursor: pointer;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: block;
     margin-right: 1rem;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {   
+    margin-right: 6rem;   
   }
 `;
 

@@ -19,6 +19,11 @@ export const Container = styled.section`
     @media (max-width: 768px) {
         height: 50rem;
     }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
 `;
 
 export const TitleContainer = styled.div`
@@ -34,6 +39,11 @@ export const TitleContainer = styled.div`
         margin-top: 3rem;
         margin-right: 1rem;
         margin-left: 1rem;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+       width: 100%;
+       margin-right: 0;
     }
 `;
 
@@ -51,6 +61,11 @@ export const RecomendationsContainer = styled.div`
         margin-right: 1rem;
         margin-left: 1rem;
     }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
 `;
 
 export const TextContainer = styled.div`
@@ -63,6 +78,10 @@ export const TextContainer = styled.div`
         .mobile-hide {
             display: none;
         }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        white-space: nowrap;
     }
 `;
 

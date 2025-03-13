@@ -13,6 +13,10 @@ export const Container = styled.section`
         flex-direction: column;
         height: auto;
     }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        margin-left: 5rem;
+    }
 `;
 
 export const TextContainer = styled.div`
@@ -39,6 +43,11 @@ export const TextContainer = styled.div`
     @media (max-width: 768px) {
         margin-right: 2rem;
         margin-left: 2rem;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        margin-left: 5rem;
+        margin-right: 1.6rem;
     }
 `;
 
@@ -104,5 +113,10 @@ export const FormContainer = styled.div`
         margin-left: 2rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        margin-left: 5rem;
+        margin-right: 10rem;
     }
 `;

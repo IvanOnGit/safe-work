@@ -47,6 +47,13 @@ export const Container = styled.section`
   @media (max-width: 768px) {
     display: none;
   }
+
+  @media (min-width: 768px) and (max-width: 1024px) {   
+    height: 40rem;
+    justify-content: center;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 `;
 
 export const MobileContainer = styled.section`
@@ -132,5 +139,11 @@ export const List = styled.ul`
     padding-left: 0;
     margin-left: 4rem;
     margin-right: 1rem;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    margin-left: 0;
+    padding-left: 3rem;
+    gap: 1.5rem;
   }
 `;

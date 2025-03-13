@@ -25,6 +25,10 @@ text-align: center;
   width: 18rem;
   height: auto;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {   
+  top: 20%;
+}
 `;
 
 export const TextContainer = styled.div`

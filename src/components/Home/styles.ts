@@ -13,6 +13,9 @@ justify-content: space-between;
     width: 100%;
     flex-direction: column;
 }
+@media (min-width: 768px) and (max-width: 1024px) {   
+    height: 35rem;
+    }
 `;
 
 export const TextContainer = styled.div`
@@ -33,6 +36,15 @@ export const TextContainer = styled.div`
         margin-left: 1rem;
         margin-bottom: 0;
     }
+
+    @media (min-width: 768px) and (max-width: 1024px) {   
+        h1 {
+            font-size: 2.4rem;
+        }
+        p {
+            font-size: 0.8rem;
+        }
+    }
 `;
 
 export const VideoContainer = styled.div`
@@ -45,6 +57,13 @@ export const VideoContainer = styled.div`
 
     @media (max-width: 768px) {
         display: none;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {   
+        img {
+            width: 25rem;
+            height: 15rem;
+        }
     }
 `;
 
