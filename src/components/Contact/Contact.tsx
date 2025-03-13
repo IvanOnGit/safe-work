@@ -25,7 +25,7 @@ function Contact() {
     e.preventDefault();
   
     try {
-      const response = await fetch('http://localhost:3001/api/contact', {
+      const response = await fetch('https://safe-work-backend.onrender.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -31,7 +31,7 @@ function HowCanWeHelpYou() {
     const allData = { answers, formData };
 
     try {
-        const response = await fetch('http://localhost:3001/api/contact/help-request', {
+        const response = await fetch('https://safe-work-backend.onrender.com/api/contact/help-request', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
