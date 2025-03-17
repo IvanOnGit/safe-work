@@ -24,7 +24,7 @@ function WhyUs() {
                 <p>
                 Si estás listo para recibir el apoyo que mereces y construir una <br />solución real, agenda una consulta hoy mismo.
                 </p>
-                <button>Comienza tu cambio</button>
+                <button  onClick={() => window.open("https://wa.me/34622377041?text=Hola,%20me%20gustaría%20agendar%20una%20asesoría%20SafeWork.", "_blank")}>Comienza tu cambio</button>
             </TextContainer>
         </WhyUsContainer>
       </Container>
