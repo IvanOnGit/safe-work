@@ -39,22 +39,22 @@ function BookAssestmentSection() {
   return (
     <Container ref={containerRef} className={isVisible ? 'visible' : ''}>
       <TextContainer>
-        <h2>RECUPERA TU PAZ EN EL TRABAJO</h2>
+        <h2>Haz frente al acoso con apoyo legal y psicológico especializado</h2>
         <h1>
-          Toma el control y pon fin al <span className="mobile-hide"><br /></span> 
-          acoso laboral de una vez <span className="mobile-hide"><br /></span> por todas
+        Nadie debería sufrir acoso laboral<span className="mobile-hide"><br /></span> 
+        ni tratos denigrantes en el trabajo.<span className="mobile-hide"><br /></span>
         </h1>
         <p>
-          Sentirte atrapada en un ambiente tóxico no es <span className="mobile-hide"><br /></span> 
-          tu única opción. Con SafeWork, accede a un <span className="mobile-hide"><br /></span> 
-          plan integral que combina asesoría legal, <span className="mobile-hide"><br /></span> 
-          apoyo psicológico y estrategias efectivas para <span className="mobile-hide"><br /></span> 
-          enfrentar el acoso laboral con confianza.
+          Nuestro equipo de psicólogos y abogados expertos <span className="mobile-hide"><br /></span> 
+          en mobbing te acompañaen cada paso <span className="mobile-hide"><br /></span> 
+          para ayudarte a salir de esta situación, <span className="mobile-hide"><br /></span> 
+          recuperar tu estabilidad emocional y <span className="mobile-hide"><br /></span> 
+          y defender tus derechos con confianza.
         </p>
         <button 
           onClick={() => window.open("https://wa.me/34622377041?text=Hola,%20me%20gustaría%20agendar%20una%20asesoría%20SafeWork.", "_blank")}
         >
-          Agenda una asesoría SafeWork
+          Agenda una asesoría
         </button>
       </TextContainer>
       <ImageContainer>

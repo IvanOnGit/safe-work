@@ -133,7 +133,7 @@ export const FormContainer = styled.div`
 `;
 
 export const Input = styled.input`
-  width: 45%;
+  width: 100%;
   padding: 0.5rem;
   border: none;
   border-bottom: 1px solid #D9D9D9;

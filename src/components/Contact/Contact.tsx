@@ -51,11 +51,19 @@ function Contact() {
     <>
       <Container id="contact">
       <TextContainer>
-        <h1>Queremos conocer tu situación, <br /> entremos en contacto</h1>
+        <h1>Cuéntanos tu caso y te <br />ayudaremos a saber cómo actuar</h1>
         <p>
-          Para nosotros cada historia es importante, por eso trabajamos de <br />
-          cerca con nuestros clientes, acompañándoles en cada parte del <br /> camino.
+        Rellena este formulario de forma sencilla y confidencial.
         </p>
+        <p>
+        Nuestro equipo valorará tu situación y te responderá con <br/>orientación profesional y sin
+        compromiso.
+        </p>
+        <p>
+        Estamos aquí para ayudarte a dar el primer paso, con respeto, <br />escucha y total
+        discreción.
+        </p>
+        
         <p>
           ¿Te gustaría escribirnos por WhatsApp?{" "}
           <a 
@@ -72,7 +80,7 @@ function Contact() {
             <input
               type="text"
               name="nombre"
-              placeholder="Nombre completo"
+              placeholder="Nombre"
               value={formData.nombre}
               onChange={handleChange}
             />

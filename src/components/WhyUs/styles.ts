@@ -42,7 +42,7 @@ export const WhyUsContainer = styled.div`
     margin-bottom: 2rem;
 
     img {
-        height: 26rem;
+        height: 30rem;
         width: 25rem;
         object-fit: cover;
         object-position: center;

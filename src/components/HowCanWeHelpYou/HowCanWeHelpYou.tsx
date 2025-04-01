@@ -4,7 +4,7 @@ import { ButtonsContainer, Container, FormContainer, Input, NextButton, SubmitBu
 
 function HowCanWeHelpYou() {
   const [currentStep, setCurrentStep] = useState(1);
-  const [answers, setAnswers] = useState<string[]>([]);
+  const [answers, setAnswers] = useState<(string | string[])[]>([]);
   const [formData, setFormData] = useState({ firstName: '', lastName: '', email: '', phone: '', newsletter: true });
 
   const handleNext = () => {
@@ -14,8 +14,27 @@ function HowCanWeHelpYou() {
   };
 
   const handleSelectOption = (option: string) => {
+    const stepIndex = currentStep - 1;
     const updatedAnswers = [...answers];
-    updatedAnswers[currentStep - 1] = option;
+
+    if (currentStep === 1) {
+      // Paso 1: Solo una selección
+      updatedAnswers[stepIndex] = option;
+    } else {
+      // Paso 2 y 3: Permitir múltiples selecciones
+      if (!Array.isArray(updatedAnswers[stepIndex])) {
+        updatedAnswers[stepIndex] = [];
+      }
+
+      const selectedOptions = updatedAnswers[stepIndex] as string[];
+
+      if (selectedOptions.includes(option)) {
+        updatedAnswers[stepIndex] = selectedOptions.filter(item => item !== option);
+      } else {
+        updatedAnswers[stepIndex] = [...selectedOptions, option];
+      }
+    }
+
     setAnswers(updatedAnswers);
   };
 
@@ -48,7 +67,7 @@ function HowCanWeHelpYou() {
         console.error('Error al enviar los datos:', error);
         alert('Error de conexión con el servidor');
     }
-};
+  };
 
   return (
     <Container id="how-can-we-help-you">
@@ -56,14 +75,17 @@ function HowCanWeHelpYou() {
 
       {currentStep === 1 && (
         <TextContainer>
-          <h1>¿Cómo podemos ayudarte?</h1>
-          <h2>Selecciona todas las que apliquen</h2>
+          <h1>¿Desde hace cuánto estás <br />sufriendo acoso laboral?</h1>
+          <h2>Elige la opción que más se ajuste a ti</h2>
           <ButtonsContainer>
-            {[ 'Conversar con un profesional', 'Generar informe policial psicológico', 'Asesoramiento para indemnización', 'Psicoterapia' ].map((option, index) => (
+            {['Menos de 3 meses', 'Entre 3 y 6 meses', 'Entre 6 meses y 1 año', 'Más de 1 año'].map((option, index) => (
               <button
                 key={index}
                 onClick={() => handleSelectOption(option)}
-                style={{ backgroundColor: answers[currentStep - 1] === option ? '#001C3C' : 'white', color: answers[currentStep - 1] === option ? 'white' : '#001C3C' }}
+                style={{
+                  backgroundColor: answers[currentStep - 1] === option ? '#001C3C' : 'white',
+                  color: answers[currentStep - 1] === option ? 'white' : '#001C3C'
+                }}
               >
                 {option}
               </button>
@@ -74,14 +96,22 @@ function HowCanWeHelpYou() {
 
       {currentStep === 2 && (
         <TextContainer>
-          <h1>¿Hace cuánto tiempo te <br />encuentras en esa empresa?</h1>
-          <h2>Elige la opción que más se ajuste a ti</h2>
+          <h1>¿Qué conductas estás sufriendo?</h1>
+          <h2>Elige las opciones que correspondan</h2>
           <ButtonsContainer>
-            {[ 'Menos de 1 año', 'Entre 1 y 5 años', 'Más de 5 años', 'Más de 10 años', 'Más de 15 años', 'Más de 20 años' ].map((option, index) => (
+            {[
+              'Me desprestigian personal y/o profesionalmente',
+              'Me aíslan o dificultan que haga mi trabajo',
+              'Me sobrecargan con tareas o no tengo casi ninguna',
+              'Me discriminan de otras formas'
+            ].map((option, index) => (
               <button
                 key={index}
                 onClick={() => handleSelectOption(option)}
-                style={{ backgroundColor: answers[currentStep - 1] === option ? '#001C3C' : 'white', color: answers[currentStep - 1] === option ? 'white' : '#001C3C' }}
+                style={{
+                  backgroundColor: Array.isArray(answers[currentStep - 1]) && answers[currentStep - 1].includes(option) ? '#001C3C' : 'white',
+                  color: Array.isArray(answers[currentStep - 1]) && answers[currentStep - 1].includes(option) ? 'white' : '#001C3C'
+                }}
               >
                 {option}
               </button>
@@ -92,14 +122,17 @@ function HowCanWeHelpYou() {
 
       {currentStep === 3 && (
         <TextContainer>
-          <h1>¿Cuál es tu promedio <br />salarial anual?</h1>
-          <h2>Elige la opción que más se ajuste a ti</h2>
+          <h1>¿Tienes alguno de estos síntomas?</h1>
+          <h2>Elige las opciones que correspondan</h2>
           <ButtonsContainer>
-            {[ '€12-20mil', '€20-40mil', '€40-60mil', '€60-80mil', '€80-100mil', 'más de €100mil' ].map((option, index) => (
+            {['Ansiedad', 'Insomnio', 'Apatía y/o falta de energía', 'Somatizaciones'].map((option, index) => (
               <button
                 key={index}
                 onClick={() => handleSelectOption(option)}
-                style={{ backgroundColor: answers[currentStep - 1] === option ? '#001C3C' : 'white', color: answers[currentStep - 1] === option ? 'white' : '#001C3C' }}
+                style={{
+                  backgroundColor: Array.isArray(answers[currentStep - 1]) && answers[currentStep - 1].includes(option) ? '#001C3C' : 'white',
+                  color: Array.isArray(answers[currentStep - 1]) && answers[currentStep - 1].includes(option) ? 'white' : '#001C3C'
+                }}
               >
                 {option}
               </button>
@@ -114,7 +147,6 @@ function HowCanWeHelpYou() {
           <h2>Ingresa tu información debajo</h2>
           <div className="input-group">
             <Input type="text" name="firstName" placeholder="Primer nombre" value={formData.firstName} onChange={handleInputChange} />
-            <Input type="text" name="lastName" placeholder="Apellido" value={formData.lastName} onChange={handleInputChange} />
           </div>
           <div className="input-group">
             <Input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleInputChange} />
@@ -125,7 +157,7 @@ function HowCanWeHelpYou() {
           </label>
           <div className="button-group">
             <SubmitButton onClick={handleSubmit}>Enviar información</SubmitButton>
-            <SubmitButton secondary  onClick={() => window.open("https://wa.me/34622377041?text=Hola,%20me%20gustaría%20agendar%20una%20asesoría%20SafeWork.", "_blank")}>Escríbenos a WhatsApp</SubmitButton>
+            <SubmitButton secondary onClick={() => window.open("https://wa.me/34622377041?text=Hola,%20me%20gustaría%20agendar%20una%20asesoría%20SafeWork.", "_blank")}>Escríbenos a WhatsApp</SubmitButton>
           </div>
         </FormContainer>
       )}

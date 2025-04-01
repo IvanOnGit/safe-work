@@ -4,25 +4,35 @@ function WhyUs() {
     <>
       <Container id="why-us">
         <TitleContainer>
-            <h1>¿Por qué elegir SafeWork como la empresa que <br />te acompaña y te da soporte?</h1>
+            <h1>Dar el paso no es fácil, pero puede cambiarlo todo</h1>
         </TitleContainer>
         <WhyUsContainer>
             <img src="/images/WhyUs.jpg" alt="" />
             <TextContainer>
                 <p>
-                ¿Sientes que has buscado apoyo pero solo has encontrado <br />respuestas vacías y soluciones superficiales?
+                Sabemos que no es sencillo. Dar el paso genera muchas dudas, y <br />más
+                cuando llevas tiempo en una situación que te desgasta tanto por dentro.
                 </p>
                 <p>
-                ¿Sigues lidiando con el acoso laboral, sin una guía clara y con la <br />sensación de estar solo en esto?. Si esta es tu realidad, estamos <br />aquí para ayudarte.
+                Es normal tener miedo a no poder demostrar lo que estás viviendo, a <br />perder tu trabajo,
+                a sentir que nadie te va a escuchar o que todo esto solo va a empeorar.
                 </p>
                 <p>
-                En SafeWork, te brindamos el acompañamiento y las <br />herramientas necesarias para enfrentar tu situación con <br />seguridad.
+                También es normal pensar: “¿y si estoy exagerando?”,<br />“¿y si no sirve de nada?”, “¿y si
+                solo pierdo tiempo y dinero?”.
                 </p>
                 <p>
-                Te guiamos paso a paso para que tomes decisiones informadas <br />y recuperes el control de tu vida profesional.
+                El acoso laboral te hace dudar incluso de ti mismo/a. Te aísla,<br />te agota y te empuja a
+                callar por miedo a las consecuencias.
                 </p>
                 <p>
-                Si estás listo para recibir el apoyo que mereces y construir una <br />solución real, agenda una consulta hoy mismo.
+                Por eso, detrás de esta página, hay un equipo humano que entiende lo que estás
+                viviendo.<br />Personas que han escuchado muchas historias como la tuya, y que están<br /> aquí para ayudarte sin juzgarte, sin presionarte y con el respeto que mereces.
+                </p>
+                <p>
+                Si te estás planteando pedir ayuda, este puede ser el comienzo de algo distinto.<br />Un
+                primer paso hacia recuperar tu bienestar, tu estabilidad <br />y la seguridad de saber que
+                estás haciendo lo correcto.
                 </p>
                 <button  onClick={() => window.open("https://wa.me/34622377041?text=Hola,%20me%20gustaría%20agendar%20una%20asesoría%20SafeWork.", "_blank")}>Comienza tu cambio</button>
             </TextContainer>
