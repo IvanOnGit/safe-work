@@ -24,7 +24,7 @@ text-align: center;
 @media (max-width: 768px) {
   width: 18rem;
   height: auto;
-  top: 35%;
+  top: 60%;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {   

@@ -37,6 +37,10 @@ export const RecomendationsContainer = styled.div`
   border-radius: 12px;
   height: 22rem; /* Altura fija para evitar cambios */
   overflow: hidden; /* Evita que el contenido sobrepase la tarjeta */
+
+  @media (max-width: 768px) {
+    height: 45rem;
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -109,6 +113,10 @@ export const Stars = styled.div`
 export const RecomendationsLogo = styled.img`
   width: 7rem;
   margin-right: 5rem;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+  }
 `;
 
 export const CarouselControls = styled.div`

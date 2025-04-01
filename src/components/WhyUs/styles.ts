@@ -86,7 +86,7 @@ export const TextContainer = styled.div`
 
         @media (max-width: 768px) {
             position: absolute;
-            margin-top: 56.5rem;
+            margin-top: 69rem;
             width: 20rem;
             align-self: center;
             padding: 1rem;
