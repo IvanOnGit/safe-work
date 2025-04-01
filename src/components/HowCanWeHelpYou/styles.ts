@@ -1,60 +1,72 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-margin: 0;
-padding: 1rem;
-background-color: white;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-height: 25rem;
-width: 40rem;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-margin-top: 30rem;
-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-font-family: 'Inter', sans-serif;
-gap: 2rem;
-color: #001C3C;
-text-align: center;
+  margin: 0;
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 25rem;
+  width: 40rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Modificamos el transform para combinar el posicionamiento con la animación */
+  transform: translate(-50%, -50%) translateY(50px);
+  margin-top: 30rem;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  font-family: 'Inter', sans-serif;
+  gap: 2rem;
+  color: #001C3C;
+  text-align: center;
+  
+  /* Estilos de animación */
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  
+  &.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0); /* Deslizar hacia arriba cuando sea visible */
+  }
 
-@media (max-width: 768px) {
-  width: 18rem;
-  height: auto;
-  top: 60%;
-}
+  @media (max-width: 768px) {
+    width: 18rem;
+    height: auto;
+    top: 60%;
+    /* Siempre visible en móvil */
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0); /* Sin animación en móvil */
+  }
 
-@media (min-width: 768px) and (max-width: 1024px) {   
-  top: 20%;
-}
+  @media (min-width: 768px) and (max-width: 1024px) {   
+    top: 20%;
+  }
 `;
 
 export const TextContainer = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-gap: 1rem;
-h1 {
-    color: #001C3C;
-    margin: 0;
-    padding: 0;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  h1 {
+      color: #001C3C;
+      margin: 0;
+      padding: 0;
+  }
 
-h2 {
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-    font-weight: 100;
-}
-
+  h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 1rem;
+      font-weight: 100;
+  }
 `;
 
 export const ButtonsContainer = styled.div`
-max-width: 100%;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -71,11 +83,11 @@ max-width: 100%;
 `;
 
 export const NextButton = styled.button`
-background-color:  #001C3C;
-color: white;
-padding: 1rem;
-border: none;
-cursor: pointer;
+  background-color: #001C3C;
+  color: white;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
 `;
 
 export const FormContainer = styled.div`
@@ -153,5 +165,3 @@ export const SubmitButton = styled.button<{ secondary?: boolean }>`
   width: 15rem;
   text-align: center;
 `;
-
-

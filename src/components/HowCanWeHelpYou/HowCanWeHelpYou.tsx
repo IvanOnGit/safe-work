@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Stepper from '../Stepper/Stepper';
 import { ButtonsContainer, Container, FormContainer, Input, NextButton, SubmitButton, TextContainer } from './styles';
 
@@ -6,6 +6,39 @@ function HowCanWeHelpYou() {
   const [currentStep, setCurrentStep] = useState(1);
   const [answers, setAnswers] = useState<(string | string[])[]>([]);
   const [formData, setFormData] = useState({ firstName: '', lastName: '', email: '', phone: '', newsletter: true });
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    // Detecta si la pantalla es mayor a 768px
+    const isDesktopOrTablet = window.innerWidth >= 768;
+  
+    if (!isDesktopOrTablet) {
+      setIsVisible(true); // Siempre visible en mobile
+      return;
+    }
+  
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.4 }
+    );
+  
+    const currentContainer = containerRef.current; // Copy the value to a local variable
+  
+    if (currentContainer) {
+      observer.observe(currentContainer);
+    }
+  
+    return () => {
+      if (currentContainer) {
+        observer.unobserve(currentContainer);
+      }
+    };
+  }, []);
 
   const handleNext = () => {
     if (currentStep < 4) {
@@ -70,7 +103,7 @@ function HowCanWeHelpYou() {
   };
 
   return (
-    <Container id="how-can-we-help-you">
+    <Container id="how-can-we-help-you" ref={containerRef} className={isVisible ? 'visible' : ''}>
       <Stepper currentStep={currentStep} />
 
       {currentStep === 1 && (
