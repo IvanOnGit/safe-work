@@ -111,11 +111,12 @@ export const Stars = styled.div`
 `;
 
 export const RecomendationsLogo = styled.img`
-  width: 7rem;
+  width: 4rem;
   margin-right: 5rem;
 
   @media (max-width: 768px) {
     margin-right: 0;
+    width: 4rem;
   }
 `;
 

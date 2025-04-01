@@ -79,6 +79,7 @@ export const ButtonsContainer = styled.div`
     color: #001C3C;
     border: 1px solid #D9D9D9;
     cursor: pointer;
+    font-size: 0.9rem;
   }
 `;
 
@@ -88,6 +89,7 @@ export const NextButton = styled.button`
   padding: 1rem;
   border: none;
   cursor: pointer;
+  font-size: 0.9rem;
 `;
 
 export const FormContainer = styled.div`

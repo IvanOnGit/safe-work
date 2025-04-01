@@ -48,7 +48,7 @@ export const TextContainer = styled.div`
     }
 
     h2 {
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 100;
         margin: 0;
         padding: 0;
@@ -57,6 +57,7 @@ export const TextContainer = styled.div`
     p {
         margin: 0;
         padding: 0;
+        font-size: 1.1rem;
     }
 
     button {
@@ -66,6 +67,7 @@ export const TextContainer = styled.div`
     padding: 1rem;
     border-radius: 1rem;
     cursor: pointer;
+    font-size: 1rem;
     
     @media (max-width: 768px) {
         margin-bottom: 1rem;

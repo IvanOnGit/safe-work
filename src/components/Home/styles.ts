@@ -29,7 +29,7 @@ export const TextContainer = styled.div`
         font-weight: 100;
     }
     p {
-        font-size: 1rem;
+        font-size: 1.1rem;
         word-spacing: 0.2rem;
     }
 

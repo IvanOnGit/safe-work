@@ -20,7 +20,7 @@ export const Container = styled.section`
 
 export const TitleContainer = styled.div`
     margin-bottom: 1rem;
-    margin-right: 24rem;
+    margin-right: 39rem;
     text-align: left;
 
     h1 {
@@ -64,7 +64,7 @@ export const WhyUsContainer = styled.div`
 export const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.65rem;
 
     p {
         font-family: 'Inter', sans-serif;
@@ -72,6 +72,7 @@ export const TextContainer = styled.div`
         color: #001C3C;
         margin: 0;
         padding: 0;
+        font-size: 1.1rem;
     }
 
     button {
@@ -82,7 +83,8 @@ export const TextContainer = styled.div`
         padding: 1rem;
         font-family: 'Inter', sans-serif;
         cursor: pointer;
-        width: 10rem;
+        width: 11rem;
+        font-size: 0.9rem;
 
         @media (max-width: 768px) {
             position: absolute;

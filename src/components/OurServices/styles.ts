@@ -16,7 +16,7 @@ export const TextContainer = styled.div`
 
     h2 {
         font-weight: 100;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 
     .desktop-hide {

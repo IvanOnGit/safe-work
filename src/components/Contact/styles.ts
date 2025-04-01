@@ -34,7 +34,7 @@ export const TextContainer = styled.div`
     }
 
     p {
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 100;
         margin: 0;
         padding: 0;
@@ -102,6 +102,7 @@ export const FormContainer = styled.div`
             border-radius: 0.5rem;
             font-family: 'Inter', sans-serif;
             cursor: pointer;
+            font-size: 1rem;
         }
     }
 
