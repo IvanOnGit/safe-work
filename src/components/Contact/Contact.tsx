@@ -64,14 +64,14 @@ function Contact() {
         discreción.
         </p>
         
-        <p>
+        <p className="whatsapp">
           ¿Te gustaría escribirnos por WhatsApp?{" "}
           <a 
             href="https://wa.me/34622377041?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios." 
             target="_blank" 
             rel="noopener noreferrer"
           >
-            ¡Haz click Aquí!
+            <img src="/images/WhatsAppLogo.svg" alt="WhatsApp" />
           </a>
         </p>
       </TextContainer>

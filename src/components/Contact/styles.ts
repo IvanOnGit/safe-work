@@ -40,6 +40,18 @@ export const TextContainer = styled.div`
         padding: 0;
     }
 
+    p:last-of-type {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    p:last-of-type img {
+        width: 2rem;
+    }
+
+    
+
     @media (max-width: 768px) {
         margin-right: 2rem;
         margin-left: 2rem;
@@ -63,7 +75,7 @@ export const FormContainer = styled.div`
         display: flex;
         flex-direction: column;
         height: 25rem;
-        gap: 1.5rem;
+        gap: 2.2rem;
 
         input {
             border: none;
