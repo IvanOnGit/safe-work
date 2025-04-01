@@ -62,7 +62,7 @@ max-width: 100%;
 
   button {
     width: 15rem;
-    padding: 0.5rem;
+    padding: 1rem;
     background-color: white;
     color: #001C3C;
     border: 1px solid #D9D9D9;
@@ -73,7 +73,7 @@ max-width: 100%;
 export const NextButton = styled.button`
 background-color:  #001C3C;
 color: white;
-padding: 0.5rem;
+padding: 1rem;
 border: none;
 cursor: pointer;
 `;
@@ -106,6 +106,10 @@ export const FormContainer = styled.div`
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
+
+    button {
+      padding: 1rem;
+    }
   }
 
   label {

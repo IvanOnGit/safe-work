@@ -42,7 +42,7 @@ export const WhyUsContainer = styled.div`
     margin-bottom: 2rem;
 
     img {
-        height: 30rem;
+        height: 31rem;
         width: 25rem;
         object-fit: cover;
         object-position: center;
@@ -79,7 +79,7 @@ export const TextContainer = styled.div`
         color: white;
         border: none;
         border-radius: 0.5rem;
-        padding: 0.5rem;
+        padding: 1rem;
         font-family: 'Inter', sans-serif;
         cursor: pointer;
         width: 10rem;

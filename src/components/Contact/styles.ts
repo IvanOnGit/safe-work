@@ -52,31 +52,28 @@ export const TextContainer = styled.div`
 `;
 
 export const FormContainer = styled.div`
-    padding: 1.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 2rem;
     background: white;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     display: flex;
     flex-direction: column;
-    margin-right: 20rem;
-    width: 15rem;
+    margin-right: 10rem;
+    width: 25rem;
     form {
         display: flex;
         flex-direction: column;
-        height: 20rem;
+        height: 25rem;
         gap: 1.5rem;
 
         input {
             border: none;
             border-bottom: 1px solid #D9D9D9;
-            padding: 0.5rem;
             margin-bottom: 1rem;
             font-family: 'Inter', sans-serif;
             color: black;
             margin: 0;
             padding: 0;
-            font-size: 0.7rem;
+            font-size: 0.8rem;
             outline: none;
 
             @media (max-width: 768px) {
@@ -101,7 +98,7 @@ export const FormContainer = styled.div`
             border: none;
             background-color: #001C3C;
             color: white;
-            padding: 0.5rem;
+            padding: 1rem;
             border-radius: 0.5rem;
             font-family: 'Inter', sans-serif;
             cursor: pointer;

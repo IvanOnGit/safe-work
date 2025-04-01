@@ -11,6 +11,7 @@ export const Container = styled.div`
 
 export const Logo = styled.img`
   margin-left: 6.81rem;
+  width: 21rem;
 
   @media (max-width: 768px) {
     margin-left: 1rem;
