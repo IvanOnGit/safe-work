@@ -59,6 +59,7 @@ export const WhyUsContainer = styled.div`
 
     @media (max-width: 768px) {
         flex-direction: column-reverse;
+        margin-bottom: 5rem;
     }
 `;
 
@@ -89,7 +90,7 @@ export const TextContainer = styled.div`
 
         @media (max-width: 768px) {
             position: absolute;
-            margin-top: 74rem;
+            margin-top: 76rem;
             width: 20rem;
             align-self: center;
             padding: 1rem;
