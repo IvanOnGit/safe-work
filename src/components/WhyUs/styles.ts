@@ -88,11 +88,17 @@ export const TextContainer = styled.div`
 
         @media (max-width: 768px) {
             position: absolute;
-            margin-top: 69rem;
+            margin-top: 74rem;
             width: 20rem;
             align-self: center;
             padding: 1rem;
         }
+    }
+
+    button:hover {
+        background-color: #183a6c;
+        color: white;
+        transition: all 0.3s ease-in-out;
     }
 
     @media (max-width: 768px) {

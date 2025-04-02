@@ -23,6 +23,7 @@ export const TitleContainer = styled.div`
 
   h1 {
     font-size: 1.5rem;
+    color: #0d2538;
   }
 `;
 

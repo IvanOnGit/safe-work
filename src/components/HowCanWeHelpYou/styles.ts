@@ -124,6 +124,12 @@ export const FormContainer = styled.div`
     button {
       padding: 1rem;
     }
+
+    button:hover {
+        background-color: #183a6c;
+        color: white;
+        transition: all 0.3s ease-in-out;
+    }
   }
 
   label {

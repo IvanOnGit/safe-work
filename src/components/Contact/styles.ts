@@ -48,6 +48,11 @@ export const TextContainer = styled.div`
 
     p:last-of-type img {
         width: 2rem;
+
+        @media (max-width: 768px) {
+            margin-right: 2rem;
+            width: 2.5rem;
+        }
     }
 
     
@@ -116,6 +121,17 @@ export const FormContainer = styled.div`
             cursor: pointer;
             font-size: 1rem;
         }
+
+        button:hover {
+        background-color: #183a6c;
+        color: white;
+        transition: all 0.3s ease-in-out;
+        }
+
+        @media (max-width: 768px) {
+            height: 30rem;
+            gap: 3rem;
+        }
     }
 
     @media (max-width: 768px) {
@@ -123,6 +139,7 @@ export const FormContainer = styled.div`
         margin-left: 2rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
+        width: 18rem;
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {

@@ -25,7 +25,7 @@ export const Container = styled.section`
         height: 40rem;
         opacity: 1;
         transform: none;
-        margin-top: 32rem;
+        margin-top: 35rem;
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {   
