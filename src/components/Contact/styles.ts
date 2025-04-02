@@ -40,22 +40,26 @@ export const TextContainer = styled.div`
         padding: 0;
     }
 
-    p:last-of-type {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    p:last-of-type img {
-        width: 2rem;
+    button {
+        background-color: #001C3C;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        font-family: 'Inter', sans-serif;
+        cursor: pointer;
+        width: 12rem;
 
         @media (max-width: 768px) {
-            margin-right: 2rem;
-            width: 2.5rem;
+            width: 100%;
         }
     }
 
-    
+    button:hover {
+    background-color: #183a6c;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    }
 
     @media (max-width: 768px) {
         margin-right: 2rem;

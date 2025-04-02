@@ -64,16 +64,9 @@ function Contact() {
         discreción.
         </p>
         
-        <p className="whatsapp">
-          ¿Te gustaría escribirnos por WhatsApp?{" "}
-          <a 
-            href="https://wa.me/34622377041?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios." 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            <img src="/images/WhatsAppLogo.svg" alt="WhatsApp" />
-          </a>
-        </p>
+        <button onClick={() => window.open('https://wa.me/34622377041?text=Hola, me gustaría saber más sobre sus servicios.', '_blank')}>
+        Escríbenos por WhatsApp
+        </button>
       </TextContainer>
         <FormContainer>
           <form onSubmit={handleSubmit}>
