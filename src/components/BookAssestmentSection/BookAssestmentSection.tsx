@@ -58,7 +58,7 @@ function BookAssestmentSection() {
         </button>
       </TextContainer>
       <ImageContainer>
-        <img src="/images/profesional.jpg" alt="" />
+        <img src="/images/SafeWork.png" alt="" />
       </ImageContainer>
     </Container>
   );

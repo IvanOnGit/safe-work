@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   margin: 0;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: white;
   display: flex;
   align-items: center;
@@ -11,7 +11,7 @@ export const Container = styled.div`
   height: 25rem;
   width: 40rem;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   /* Modificamos el transform para combinar el posicionamiento con la animación */
   transform: translate(-50%, -50%) translateY(50px);
@@ -35,6 +35,7 @@ export const Container = styled.div`
     width: 18rem;
     height: auto;
     top: 60%;
+    padding: 1rem;
     /* Siempre visible en móvil */
     opacity: 1;
     transform: translate(-50%, -50%) translateY(0); /* Sin animación en móvil */

@@ -6,7 +6,7 @@ export const Container = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 20rem;
+    margin-top: 24rem;
 
     @media (min-width: 768px) {
         opacity: 0;

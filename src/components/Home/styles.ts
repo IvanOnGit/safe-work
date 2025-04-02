@@ -53,8 +53,11 @@ export const VideoContainer = styled.div`
     margin-right: 6rem;
     margin-bottom: 7rem;
     img {
-        width: 35rem;
-        height: 20rem;
+        width: 28rem;
+        height: 28rem;
+        object-fit: contain;
+        object-position: center;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     }
 
     @media (max-width: 768px) {
@@ -66,6 +69,13 @@ export const VideoContainer = styled.div`
             width: 25rem;
             height: 15rem;
         }
+    }
+
+    p {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        font-size: 1rem;
+        text-align: center;
     }
 `;
 

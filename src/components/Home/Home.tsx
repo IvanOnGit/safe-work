@@ -22,7 +22,8 @@ function Home() {
           </p>
         </TextContainer>
         <VideoContainer>
-          <img src="/images/HeroVideo.webp" alt="" />
+          <img src="/images/MiguelPerezUrzay.jpg" alt="" />
+          <p>Miguel Pérez Urzay - Director</p>
         </VideoContainer>
         <HowCanWeHelpYou />
       </Container>
