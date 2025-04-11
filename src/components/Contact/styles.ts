@@ -35,7 +35,7 @@ export const TextContainer = styled.div`
 
     p {
         font-size: 1.1rem;
-        font-weight: 100;
+        font-weight: 600;
         margin: 0;
         padding: 0;
     }

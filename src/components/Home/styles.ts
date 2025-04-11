@@ -35,7 +35,7 @@ export const TextContainer = styled.div`
 
     @media (max-width: 768px) {
         margin-left: 1rem;
-        margin-right: 1rem;
+        margin-right: 2rem;
         margin-bottom: 0;
     }
 
