@@ -34,10 +34,14 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     width: 18rem;
     height: auto;
-    top: 60%;
     padding: 1rem;
+    position: relative;
+    top: initial;
+    left: initial;
     /* Siempre visible en móvil */
     opacity: 1;
+    margin-left: 18rem;
+    margin-top: 23rem;
     transform: translate(-50%, -50%) translateY(0); /* Sin animación en móvil */
   }
 
