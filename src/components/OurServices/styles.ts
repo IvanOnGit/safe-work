@@ -15,7 +15,7 @@ export const TextContainer = styled.div`
     }
 
     h2 {
-        font-weight: 100;
+        font-weight: bold;
         margin-bottom: 3rem;
     }
 

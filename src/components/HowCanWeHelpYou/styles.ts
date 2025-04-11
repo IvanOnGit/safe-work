@@ -66,7 +66,7 @@ export const TextContainer = styled.div`
       margin: 0;
       padding: 0;
       font-size: 1rem;
-      font-weight: 100;
+      font-weight: bold;
   }
 `;
 
@@ -112,6 +112,7 @@ export const FormContainer = styled.div`
   h2 {
     margin: 0;
     padding: 0;
+    font-weight: bold;
   }
 
   .input-group {

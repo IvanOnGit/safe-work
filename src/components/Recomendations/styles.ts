@@ -97,7 +97,7 @@ export const NameOcupationAndStars = styled.div`
 
   h2 {
     font-size: 0.9rem;
-    font-weight: 400;
+    font-weight: bold;
     margin: 0;
   }
 

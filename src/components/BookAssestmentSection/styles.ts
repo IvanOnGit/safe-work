@@ -49,7 +49,7 @@ export const TextContainer = styled.div`
 
     h2 {
         font-size: 1.2rem;
-        font-weight: 100;
+        font-weight: bold;
         margin: 0;
         padding: 0;
     }
