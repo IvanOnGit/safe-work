@@ -5,8 +5,12 @@ export const Container = styled.section`
     background-color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 24rem;
+    justify-content: center;
+    gap: 4rem;
+    padding: 0 5rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 24rem auto 0 auto;
 
     @media (min-width: 768px) {
         opacity: 0;
@@ -22,10 +26,13 @@ export const Container = styled.section`
     }
 
     @media (max-width: 768px) {
-        height: 40rem;
+        flex-direction: column;
+        height: auto;
         opacity: 1;
         transform: none;
         margin-top: 35rem;
+        padding: 0 2rem;
+        gap: 2rem;
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {   
@@ -38,7 +45,6 @@ export const TextContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     font-family: 'Inter', sans-serif;
-    margin-left: 10rem;
     gap: 1.5rem;
 
     h1 {
@@ -61,28 +67,26 @@ export const TextContainer = styled.div`
     }
 
     button {
-    background-color: white;
-    color: #001C3C;
-    border: 1px solid #001C3C;
-    padding: 1rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    font-size: 1rem;
-    
-    @media (max-width: 768px) {
-        margin-bottom: 1rem;
-    }
+        background-color: white;
+        color: #001C3C;
+        border: 1px solid #001C3C;
+        padding: 1rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        font-size: 1rem;
+
+        @media (max-width: 768px) {
+            margin-bottom: 1rem;
+        }
     }
 
     button:hover {
-    background-color: #001C3C;
-    color: white;
-    transition: all 0.3s ease-in-out;
+        background-color: #001C3C;
+        color: white;
+        transition: all 0.3s ease-in-out;
     }
 
     @media (max-width: 768px) {
-        margin-left: 2rem;
-        margin-right: 2rem;
         margin-top: 5rem;
 
         .mobile-hide {
@@ -100,7 +104,6 @@ export const TextContainer = styled.div`
 export const ImageContainer = styled.div`
     display: flex;
     justify-content: center;
-    margin-right: 10rem;
 
     img {
         width: 35rem;
