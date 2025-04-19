@@ -94,6 +94,14 @@ export const TextContainer = styled.div`
         .mobile-hide {
             display: none;
         }
+
+        h1 {
+            display: none;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {
