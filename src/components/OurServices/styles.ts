@@ -34,6 +34,29 @@ export const TextContainer = styled.div`
             display: inline;
         }
     }
+
+    @media (max-width: 768px) {
+    width: 90%;
+    margin: 0;
+    margin-left: 1rem;
+
+    h2 {
+      text-align: justify;
+      display: none;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+
+    .mobile-hide {
+      display: none;
+    }
+
+    .desktop-hide {
+      display: inline;
+    }
+  }
 `;
 
 export const Container = styled.section`

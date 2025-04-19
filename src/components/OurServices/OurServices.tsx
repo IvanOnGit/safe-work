@@ -6,8 +6,15 @@ function OurServices() {
         <>
             <TextContainer>
                 <h1>Un acompañamiento integral, adaptado a lo que necesitas</h1>
-                <h2>Puedes acceder a cada servicio por separado o a un plan de acción <span className="mobile-hide"><br /></span>  <span className="desktop-hide"><br /></span>completo, adaptado a tu situación y a lo que realmente necesites.</h2>
-            </TextContainer>
+                <h2>
+                Puedes acceder a cada servicio por separado o a un plan de acción 
+                <span className="mobile-hide"><br /></span>
+                <span className="desktop-hide"> completo, adaptado a tu situación y a lo que realmente necesites.</span>
+                <span className="mobile-hide">
+                    <br />
+                    completo, adaptado a tu situación y a lo que realmente necesites.
+                </span>
+                </h2>            </TextContainer>
             <Container>
                 <ServiceCard>
                     <IconWrapper>
