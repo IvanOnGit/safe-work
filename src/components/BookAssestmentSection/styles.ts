@@ -95,6 +95,10 @@ export const TextContainer = styled.div`
             display: none;
         }
 
+        p {
+            text-align: justify;
+        }
+
         h1 {
             display: none;
         }
