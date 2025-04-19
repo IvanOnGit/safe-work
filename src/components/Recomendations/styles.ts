@@ -51,6 +51,10 @@ export const TextContainer = styled.div`
   font-size: 1rem;
   flex-grow: 1; /* Permite que el texto se acomode sin cambiar el tamaño */
   overflow: hidden; /* Asegura que el texto largo no modifique la altura */
+
+  @media (max-width: 768px) {
+    text-align: justify;
+  }
 `;
 
 export const PersonAndLogoContainer = styled.div`
