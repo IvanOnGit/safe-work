@@ -75,6 +75,10 @@ export const TextContainer = styled.div`
         margin: 0;
         padding: 0;
         font-size: 1.1rem;
+
+        @media (max-width: 768px) {
+            text-align: justify;
+        }
     }
 
     button {
