@@ -46,7 +46,7 @@ function BookAssestmentSection() {
         </h1>
         <p>
           Nuestro equipo de psicólogos y abogados expertos <span className="mobile-hide"><br /></span> 
-          en mobbing te acompañaen cada paso <span className="mobile-hide"><br /></span> 
+          en mobbing te acompaña en cada paso <span className="mobile-hide"><br /></span> 
           para ayudarte a salir de esta situación, <span className="mobile-hide"><br /></span> 
           recuperar tu estabilidad emocional y <span className="mobile-hide"><br /></span> 
           y defender tus derechos con confianza.
