@@ -68,6 +68,12 @@ export const TextContainer = styled.div`
       font-size: 1rem;
       font-weight: bold;
   }
+
+  @media (max-width: 768px) {
+      h2 {
+        display: none;
+      }
+  }
 `;
 
 export const ButtonsContainer = styled.div`
