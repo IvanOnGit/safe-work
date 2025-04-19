@@ -51,7 +51,7 @@ function Contact() {
     <>
       <Container id="contact">
       <TextContainer>
-        <h1>Cuéntanos tu caso y te ayudaremos a saber cómo actuar</h1>
+        <h1>Cuéntanos tu caso y te ayudaremos <br /> a saber cómo actuar</h1>
         <p>
         Rellena este formulario de forma sencilla y confidencial.
         </p>

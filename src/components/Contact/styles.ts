@@ -1,21 +1,23 @@
-
 import styled from 'styled-components';
 
 export const Container = styled.section`
-    height: 40rem;
     background-color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 1rem;
+    justify-content: center;
+    gap: 6rem;
+    padding: 0 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 
     @media (max-width: 768px) {
         flex-direction: column;
-        height: auto;
+        padding: 0 2rem;
+        gap: 3rem;
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {
-        margin-left: 5rem;
+        gap: 4rem;
     }
 `;
 
@@ -24,7 +26,6 @@ export const TextContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     font-family: 'Inter', sans-serif;
-    margin-left: 20rem;
     gap: 1.5rem;
 
     h1 {
@@ -56,19 +57,9 @@ export const TextContainer = styled.div`
     }
 
     button:hover {
-    background-color: #183a6c;
-    color: white;
-    transition: all 0.3s ease-in-out;
-    }
-
-    @media (max-width: 768px) {
-        margin-right: 2rem;
-        margin-left: 2rem;
-    }
-
-    @media (min-width: 768px) and (max-width: 1024px) {
-        margin-left: 5rem;
-        margin-right: 1.6rem;
+        background-color: #183a6c;
+        color: white;
+        transition: all 0.3s ease-in-out;
     }
 `;
 
@@ -78,8 +69,8 @@ export const FormContainer = styled.div`
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     display: flex;
     flex-direction: column;
-    margin-right: 10rem;
     width: 25rem;
+
     form {
         display: flex;
         flex-direction: column;
@@ -89,10 +80,8 @@ export const FormContainer = styled.div`
         input {
             border: none;
             border-bottom: 1px solid #D9D9D9;
-            margin-bottom: 1rem;
             font-family: 'Inter', sans-serif;
             color: black;
-            margin: 0;
             padding: 0;
             font-size: 0.8rem;
             outline: none;
@@ -127,27 +116,22 @@ export const FormContainer = styled.div`
         }
 
         button:hover {
-        background-color: #183a6c;
-        color: white;
-        transition: all 0.3s ease-in-out;
+            background-color: #183a6c;
+            color: white;
+            transition: all 0.3s ease-in-out;
         }
 
         @media (max-width: 768px) {
-            height: 30rem;
+            height: auto;
             gap: 3rem;
         }
     }
 
     @media (max-width: 768px) {
-        margin-right: 2rem;
-        margin-left: 2rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        width: 18rem;
+        width: 90%;
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {
-        margin-left: 5rem;
-        margin-right: 10rem;
+        width: 22rem;
     }
 `;
