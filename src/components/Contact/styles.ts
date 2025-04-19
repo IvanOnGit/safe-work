@@ -62,6 +62,7 @@ export const TextContainer = styled.div`
 
     @media (max-width: 768px) {
       width: 100%;
+      font-size: 1rem;
     }
 
     &:hover {
@@ -121,6 +122,10 @@ export const FormContainer = styled.div`
       font-family: 'Inter', sans-serif;
       cursor: pointer;
       font-size: 1rem;
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
 
       &:hover {
         background-color: #183a6c;

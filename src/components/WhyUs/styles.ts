@@ -103,6 +103,7 @@ export const TextContainer = styled.div`
       width: 20rem;
       align-self: center;
       padding: 1rem;
+      font-size: 1rem;
     }
 
     &:hover {
