@@ -140,9 +140,19 @@ export const Title = styled.h3`
   font-size: 1.5rem;
   color: #0d2538;
   margin-bottom: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 2rem;
+  line-height: 2rem;
 
   @media (max-width: 768px) {
     margin: 0;
+    white-space: normal;
+    height: auto;
+    line-height: normal;
+    overflow: visible;
+    text-overflow: clip;
   }
 `;
 
