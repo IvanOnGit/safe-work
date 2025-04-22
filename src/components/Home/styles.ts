@@ -30,7 +30,8 @@ export const TextContainer = styled.div`
     }
     p {
         font-size: 1.1rem;
-        word-spacing: 0.2rem;
+        word-spacing: 0.25rem;
+        text-align: justify;
     }
 
     @media (max-width: 768px) {
