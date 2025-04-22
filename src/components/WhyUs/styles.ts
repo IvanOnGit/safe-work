@@ -20,7 +20,7 @@ export const Container = styled.section`
 
 export const TitleContainer = styled.div`
   margin-bottom: 1rem;
-  margin-right: 39rem;
+  margin-right: 36.5rem;
   text-align: left;
 
   h1 {
@@ -67,6 +67,7 @@ export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.65rem;
+  width: 45rem;
 
   p {
     font-family: 'Inter', sans-serif;
