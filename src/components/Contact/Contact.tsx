@@ -50,15 +50,15 @@ function Contact() {
   return (
     <Container id="contact">
       <TextContainer>
-        <h1>Cuéntanos tu caso y te ayudaremos <span className="desktop-br"><br /></span> a saber cómo actuar</h1>
+        <h1>Cuéntanos tu caso y te ayudaremos  a saber cómo actuar</h1>
         <p>
           Rellena este formulario de forma sencilla y confidencial.
         </p>
         <p>
-          Nuestro equipo valorará tu situación y te responderá con <span className="desktop-br"><br /></span> orientación profesional y sin compromiso.
+          Nuestro equipo valorará tu situación y te responderá con  orientación profesional y sin compromiso.
         </p>
         <p>
-          Estamos aquí para ayudarte a dar el primer paso, con respeto, <span className="desktop-br"><br /></span> escucha y total discreción.
+          Estamos aquí para ayudarte a dar el primer paso, con respeto,  escucha y total discreción.
         </p>
 
         <button onClick={() => window.open('https://wa.me/34622377041?text=Hola, me gustaría saber más sobre sus servicios.', '_blank')}>

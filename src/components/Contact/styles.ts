@@ -27,6 +27,7 @@ export const TextContainer = styled.div`
   justify-content: center;
   font-family: 'Inter', sans-serif;
   gap: 1.5rem;
+  width: 40rem;
 
   h1 {
     font-size: 2rem;
@@ -69,6 +70,10 @@ export const TextContainer = styled.div`
       background-color: #183a6c;
       transition: all 0.3s ease-in-out;
     }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
