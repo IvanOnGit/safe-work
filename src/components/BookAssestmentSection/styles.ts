@@ -53,10 +53,11 @@ export const TextContainer = styled.div`
         font-size: 2rem;
         margin: 0;
         padding: 0;
+        display: none;
     }
 
     h2 {
-        font-size: 1.2rem;
+        font-size: 2rem;
         font-weight: bold;
         margin: 0;
         padding: 0;
@@ -66,6 +67,7 @@ export const TextContainer = styled.div`
         margin: 0;
         padding: 0;
         font-size: 1.1rem;
+        text-align: justify;
     }
 
     button {

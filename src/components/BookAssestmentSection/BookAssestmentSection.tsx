@@ -45,10 +45,10 @@ function BookAssestmentSection() {
         ni tratos denigrantes en el trabajo.<span className="mobile-hide"><br /></span>
         </h1>
         <p>
-          Nuestro equipo de psicólogos y abogados expertos <span className="mobile-hide"><br /></span> 
-          en mobbing te acompaña en cada paso <span className="mobile-hide"><br /></span> 
-          para ayudarte a salir de esta situación, <span className="mobile-hide"><br /></span> 
-          recuperar tu estabilidad emocional y <span className="mobile-hide"><br /></span> 
+          Nuestro equipo de psicólogos y abogados expertos 
+          en mobbing te acompaña en cada paso 
+          para ayudarte a salir de esta situación, 
+          recuperar tu estabilidad emocional y 
           y defender tus derechos con confianza.
         </p>
         <button 
