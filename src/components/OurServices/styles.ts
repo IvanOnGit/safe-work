@@ -168,6 +168,11 @@ export const List = styled.ul`
   font-size: 1.2rem;
   li {
     margin-bottom: 0.5rem;
+    height: 7rem;
+
+    @media (max-width: 768px) {
+      height: auto;
+    }
   }
 
   @media (max-width: 768px) {
