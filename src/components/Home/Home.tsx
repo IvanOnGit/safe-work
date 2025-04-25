@@ -23,7 +23,7 @@ function Home() {
         </TextContainer>
         <VideoContainer>
           <img src="/images/MiguelPerezUrzay.jpg" alt="" />
-          <p>Miguel Pérez Urzay - Director</p>
+          <p>Miguel Pérez Urzay | Director | Psicólogo Forense y Sanitario | Docente Universitario | Epsecialista en Peritaje de Acoso Laboral</p>
         </VideoContainer>
         <HowCanWeHelpYou />
       </Container>

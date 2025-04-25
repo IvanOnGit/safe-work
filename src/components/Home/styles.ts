@@ -58,6 +58,11 @@ export const TextContainer = styled.div`
 export const VideoContainer = styled.div`
     margin-right: 6rem;
     margin-bottom: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     img {
         width: 28rem;
         height: 28rem;
@@ -82,6 +87,7 @@ export const VideoContainer = styled.div`
         color: white;
         font-size: 1rem;
         text-align: center;
+        width: 30rem;
     }
 `;
 
