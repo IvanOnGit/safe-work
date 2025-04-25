@@ -166,6 +166,20 @@ export const FormContainer = styled.div`
       flex-direction: column;
     }
   }
+
+  @media (max-width: 768px) {
+    label {
+    font-size: 0.9rem;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      margin: 0;
+      padding: 0;
+      margin-left: 1rem;
+    }
+  }
+  }
 `;
 
 export const Input = styled.input`
