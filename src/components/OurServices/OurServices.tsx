@@ -8,7 +8,6 @@ function OurServices() {
                 <h1>Un acompañamiento integral, adaptado a lo que necesitas</h1>
                 <h2>
                 Puedes acceder a cada servicio por separado o a un plan de acción 
-                <span className="mobile-hide"><br /></span>
                 <span className="desktop-hide"> completo, adaptado a tu situación y a lo que realmente necesites.</span>
                 <span className="mobile-hide">
                     <br />
