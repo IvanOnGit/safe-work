@@ -48,7 +48,7 @@ function BookAssestmentSection() {
           Nuestro equipo de psicólogos y abogados expertos 
           en mobbing te acompaña en cada paso 
           para ayudarte a salir de esta situación, 
-          recuperar tu estabilidad emocional y 
+          recuperar tu estabilidad emocional 
           y defender tus derechos con confianza.
         </p>
         <button 
