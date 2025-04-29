@@ -5,7 +5,7 @@ function WhyUs() {
     <>
       <Container id="why-us">
         <TitleContainer>
-          <h1>Dar el paso no es fácil, pero puede cambiarlo todo.</h1>
+          <h1>Dar el paso no es fácil, pero puede cambiarlo todo</h1>
         </TitleContainer>
         <WhyUsContainer>
           <img src="/images/WhyUs.jpg" alt="" />
