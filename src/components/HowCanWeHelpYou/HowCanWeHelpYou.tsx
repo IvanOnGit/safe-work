@@ -79,7 +79,18 @@ function HowCanWeHelpYou() {
     });
   };
 
+  // Función para enviar evento al dataLayer
+  const pushHelpClickEvent = () => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'how_can_we_help_you_click'
+    });
+  };
+
   const handleSubmit = async () => {
+    // Enviar evento al dataLayer antes de enviar el formulario
+    pushHelpClickEvent();
+    
     const allData = { answers, formData };
 
     try {

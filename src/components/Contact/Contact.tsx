@@ -74,6 +74,7 @@ function Contact() {
             placeholder="Nombre"
             value={formData.nombre}
             onChange={handleChange}
+            required
           />
           <input
             type="email"
@@ -81,6 +82,7 @@ function Contact() {
             placeholder="E-mail"
             value={formData.email}
             onChange={handleChange}
+            required
           />
           <input
             type="tel"
@@ -88,14 +90,16 @@ function Contact() {
             placeholder="Teléfono"
             value={formData.telefono}
             onChange={handleChange}
+            required
           />
           <textarea
             name="mensaje"
             placeholder="Mensaje"
             value={formData.mensaje}
             onChange={handleChange}
+            required
           ></textarea>
-          <button type="submit">
+          <button type="submit" data-gtm-label="formulario_contacto_enviar">
             Enviar
           </button>
         </form>
