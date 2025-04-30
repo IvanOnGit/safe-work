@@ -190,11 +190,11 @@ function HowCanWeHelpYou() {
           <h1>¿Cómo podemos contactarte?</h1>
           <h2>Ingresa tu información debajo</h2>
           <div className="input-group">
-            <Input type="text" name="firstName" placeholder="Primer nombre" value={formData.firstName} onChange={handleInputChange} />
+            <Input type="text" name="firstName" placeholder="Primer nombre" required value={formData.firstName} onChange={handleInputChange} />
           </div>
           <div className="input-group">
-            <Input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleInputChange} />
-            <Input type="tel" name="phone" placeholder="Teléfono de contacto" value={formData.phone} onChange={handleInputChange} />
+            <Input type="email" name="email" placeholder="Email" required value={formData.email} onChange={handleInputChange} />
+            <Input type="tel" name="phone" placeholder="Teléfono de contacto" required value={formData.phone} onChange={handleInputChange} />
           </div>
           <label>
             <input type="checkbox" name="newsletter" checked={formData.newsletter} onChange={handleInputChange} /> Recibir información sobre como podemos ayudarte
