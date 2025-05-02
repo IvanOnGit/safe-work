@@ -1,5 +1,56 @@
-import { useState } from "react";
-import { Container, FormContainer, TextContainer } from './styles';
+import { useState, useEffect } from "react";
+import { 
+  Container, 
+  FormContainer, 
+  TextContainer, 
+  ModalOverlay, 
+  ModalContent, 
+  ModalTitle, 
+  ModalMessage, 
+  ModalButton 
+} from './styles';
+
+// Interfaz para el modal
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  status: "success" | "error";
+  message: string;
+}
+
+// Componente Modal
+const Modal = ({ isOpen, onClose, status, message }: ModalProps) => {
+  // Manejar cierre con tecla Escape
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+    
+    if (isOpen) {
+      document.addEventListener("keydown", handleEsc);
+    }
+    
+    return () => {
+      document.removeEventListener("keydown", handleEsc);
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
+  return (
+    <ModalOverlay onClick={onClose}>
+      <ModalContent onClick={e => e.stopPropagation()}>
+        <ModalTitle status={status}>
+          {status === "success" ? "¡Éxito!" : "Error"}
+        </ModalTitle>
+        <ModalMessage>{message}</ModalMessage>
+        <ModalButton onClick={onClose}>Cerrar</ModalButton>
+      </ModalContent>
+    </ModalOverlay>
+  );
+};
 
 interface FormData {
   nombre: string;
@@ -15,8 +66,14 @@ function Contact() {
     telefono: "",
     mensaje: ""
   });
+  
   // Estado para controlar si el formulario está siendo enviado
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Estados para el modal
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalStatus, setModalStatus] = useState<"success" | "error">("success");
+  const [modalMessage, setModalMessage] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -41,32 +98,46 @@ function Contact() {
       const data = await response.json();
 
       if (response.ok) {
-        alert(data.message);
+        // Mostrar modal de éxito
+        setModalStatus("success");
+        setModalMessage(data.message || "Correo enviado correctamente");
+        setModalOpen(true);
+        // Resetear el formulario
         setFormData({ nombre: "", email: "", telefono: "", mensaje: "" });
       } else {
-        alert(`Error: ${data.error}`);
+        // Mostrar modal de error
+        setModalStatus("error");
+        setModalMessage(data.error || "Error al enviar el correo, intente más tarde");
+        setModalOpen(true);
       }
     } catch (error) {
       console.error('Error al enviar el formulario:', error);
-      alert('Hubo un problema al enviar el formulario.');
+      // Mostrar modal de error
+      setModalStatus("error");
+      setModalMessage("Hubo un problema al enviar el formulario. Intente más tarde.");
+      setModalOpen(true);
     } finally {
       // Desactivar el estado de envío independientemente del resultado
       setIsSubmitting(false);
     }
   };
 
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <Container id="contact">
       <TextContainer>
-        <h1>Cuéntanos tu caso y te ayudaremos  a saber cómo actuar</h1>
+        <h1>Cuéntanos tu caso y te ayudaremos a saber cómo actuar</h1>
         <p>
           Rellena este formulario de forma sencilla y confidencial.
         </p>
         <p>
-          Nuestro equipo valorará tu situación y te responderá con  orientación profesional y sin compromiso.
+          Nuestro equipo valorará tu situación y te responderá con orientación profesional y sin compromiso.
         </p>
         <p>
-          Estamos aquí para ayudarte a dar el primer paso, con respeto,  escucha y total discreción.
+          Estamos aquí para ayudarte a dar el primer paso, con respeto, escucha y total discreción.
         </p>
 
         <button onClick={() => window.open('https://wa.me/34622377041?text=Hola, me gustaría saber más sobre sus servicios.', '_blank')}>
@@ -123,6 +194,14 @@ function Contact() {
           </button>
         </form>
       </FormContainer>
+      
+      {/* Componente Modal */}
+      <Modal 
+        isOpen={modalOpen}
+        onClose={closeModal}
+        status={modalStatus}
+        message={modalMessage}
+      />
     </Container>
   );
 }

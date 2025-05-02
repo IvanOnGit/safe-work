@@ -179,3 +179,69 @@ export const FormContainer = styled.div`
     width: 22rem;
   }
 `;
+
+// Animación para el modal
+const fadeIn = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
+`;
+
+// Estilos para el Modal
+export const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: ${fadeIn} 0.3s ease-in-out;
+`;
+
+export const ModalContent = styled.div`
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: ${fadeIn} 0.4s ease-in-out;
+`;
+
+export const ModalTitle = styled.h3<{ status: string }>`
+  color: ${props => props.status === "error" ? "#e74c3c" : "#27ae60"};
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+`;
+
+export const ModalMessage = styled.p`
+  margin: 0;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+`;
+
+export const ModalButton = styled.button`
+  background-color: #001C3C;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  font-weight: 500;
+  align-self: center;
+
+  &:hover {
+    background-color: #183a6c;
+    transition: all 0.3s ease-in-out;
+  }
+`;
