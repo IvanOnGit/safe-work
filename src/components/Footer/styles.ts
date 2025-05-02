@@ -68,6 +68,7 @@ export const InfoContainer = styled.div`
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    width: 50%;
 
     svg {
       width: 1.2rem;

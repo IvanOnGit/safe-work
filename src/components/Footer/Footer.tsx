@@ -23,6 +23,9 @@ function Footer() {
         <StyledLink to="https://www.linkedin.com/company/safeworksolutions1/posts/?feedView=all">
             <button>Encuentranos en LinkedIn <Linkedin /></button>
         </StyledLink>
+        <StyledLink to="https://www.linkedin.com/in/miguelperezurzay/">
+            <button>Miguel Urzay en LinkedIn <Linkedin /></button>
+        </StyledLink>
       </InfoContainer>
     </Container>
   );
