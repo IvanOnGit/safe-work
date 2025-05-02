@@ -1,6 +1,47 @@
 import { useState, useRef, useEffect } from 'react';
 import Stepper from '../Stepper/Stepper';
-import { ButtonsContainer, Container, FormContainer, Input, NextButton, SubmitButton, TextContainer } from './styles';
+import { ButtonsContainer, Container, FormContainer, Input, NextButton, SubmitButton, TextContainer, ModalOverlay, ModalContent, ModalTitle, ModalMessage, ModalButton } from './styles';
+
+// Modal component extracted from Contact.tsx
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  status: "success" | "error";
+  message: string;
+}
+
+const Modal = ({ isOpen, onClose, status, message }: ModalProps) => {
+  // Handle close with Escape key
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+    
+    if (isOpen) {
+      document.addEventListener("keydown", handleEsc);
+    }
+    
+    return () => {
+      document.removeEventListener("keydown", handleEsc);
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
+  return (
+    <ModalOverlay onClick={onClose}>
+      <ModalContent onClick={e => e.stopPropagation()}>
+        <ModalTitle status={status}>
+          {status === "success" ? "¡Éxito!" : "Error"}
+        </ModalTitle>
+        <ModalMessage>{message}</ModalMessage>
+        <ModalButton onClick={onClose}>Cerrar</ModalButton>
+      </ModalContent>
+    </ModalOverlay>
+  );
+};
 
 function HowCanWeHelpYou() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -10,6 +51,11 @@ function HowCanWeHelpYou() {
   // Estado para controlar si el formulario está siendo enviado
   const [isSubmitting, setIsSubmitting] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
+  
+  // Estados para el modal
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalStatus, setModalStatus] = useState<"success" | "error">("success");
+  const [modalMessage, setModalMessage] = useState("");
 
   useEffect(() => {
     // Detecta si la pantalla es mayor a 768px
@@ -88,6 +134,11 @@ function HowCanWeHelpYou() {
       event: 'how_can_we_help_you_click'
     });
   };
+  
+  // Function to close modal
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   const handleSubmit = async () => {
     // Activar el estado de envío
@@ -107,14 +158,29 @@ function HowCanWeHelpYou() {
             body: JSON.stringify(allData),
         });
 
+        const data = await response.json();
+
         if (response.ok) {
-            alert('¡Formulario enviado con éxito!');
+            // Mostrar modal de éxito en lugar de alert
+            setModalStatus("success");
+            setModalMessage(data.message || "¡Formulario enviado con éxito!");
+            setModalOpen(true);
+            // Resetear el formulario
+            setFormData({ firstName: '', lastName: '', email: '', phone: '', newsletter: true });
+            setCurrentStep(1);
+            setAnswers([]);
         } else {
-            alert('Hubo un error al enviar el formulario');
+            // Mostrar modal de error en lugar de alert
+            setModalStatus("error");
+            setModalMessage(data.error || "Hubo un error al enviar el formulario. Intente más tarde.");
+            setModalOpen(true);
         }
     } catch (error) {
         console.error('Error al enviar los datos:', error);
-        alert('Error de conexión con el servidor');
+        // Mostrar modal de error en lugar de alert
+        setModalStatus("error");
+        setModalMessage("Error de conexión con el servidor. Intente más tarde.");
+        setModalOpen(true);
     } finally {
         // Desactivar el estado de envío independientemente del resultado
         setIsSubmitting(false);
@@ -232,6 +298,14 @@ function HowCanWeHelpYou() {
       )}
 
       {currentStep < 4 && <NextButton onClick={handleNext}>Siguiente</NextButton>}
+      
+      {/* Modal Component */}
+      <Modal 
+        isOpen={modalOpen}
+        onClose={closeModal}
+        status={modalStatus}
+        message={modalMessage}
+      />
     </Container>
   );
 }
