@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.section`
   background-color: white;
@@ -77,6 +77,11 @@ export const TextContainer = styled.div`
   }
 `;
 
+// Animación para el loader
+const spin = keyframes`
+  to { transform: rotate(360deg); }
+`;
+
 export const FormContainer = styled.div`
   padding: 2rem;
   background: white;
@@ -127,6 +132,10 @@ export const FormContainer = styled.div`
       font-family: 'Inter', sans-serif;
       cursor: pointer;
       font-size: 1rem;
+      /* Añadir display flex para alinear el loader y el texto */
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       @media (max-width: 768px) {
         font-size: 1rem;
@@ -135,6 +144,24 @@ export const FormContainer = styled.div`
       &:hover {
         background-color: #183a6c;
         transition: all 0.3s ease-in-out;
+      }
+
+      /* Estilo para cuando el botón está deshabilitado */
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+
+      /* Estilo para el loader dentro del botón */
+      .loader {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: #fff;
+        animation: ${spin} 1s ease-in-out infinite;
+        margin-right: 8px;
       }
     }
 

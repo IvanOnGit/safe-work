@@ -15,6 +15,8 @@ function Contact() {
     telefono: "",
     mensaje: ""
   });
+  // Estado para controlar si el formulario está siendo enviado
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -23,6 +25,9 @@ function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Activar el estado de envío
+    setIsSubmitting(true);
 
     try {
       const response = await fetch('https://safe-work-backend.onrender.com/api/contact', {
@@ -44,6 +49,9 @@ function Contact() {
     } catch (error) {
       console.error('Error al enviar el formulario:', error);
       alert('Hubo un problema al enviar el formulario.');
+    } finally {
+      // Desactivar el estado de envío independientemente del resultado
+      setIsSubmitting(false);
     }
   };
 
@@ -99,8 +107,19 @@ function Contact() {
             onChange={handleChange}
             required
           ></textarea>
-          <button type="submit" data-gtm-label="formulario_contacto_enviar">
-            Enviar
+          <button 
+            type="submit" 
+            data-gtm-label="formulario_contacto_enviar"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? (
+              <>
+                <span className="loader"></span>
+                <span>Enviando...</span>
+              </>
+            ) : (
+              'Enviar'
+            )}
           </button>
         </form>
       </FormContainer>
