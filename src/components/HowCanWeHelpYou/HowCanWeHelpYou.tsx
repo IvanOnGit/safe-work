@@ -7,6 +7,8 @@ function HowCanWeHelpYou() {
   const [answers, setAnswers] = useState<(string | string[])[]>([]);
   const [formData, setFormData] = useState({ firstName: '', lastName: '', email: '', phone: '', newsletter: true });
   const [isVisible, setIsVisible] = useState(false);
+  // Estado para controlar si el formulario está siendo enviado
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -88,6 +90,9 @@ function HowCanWeHelpYou() {
   };
 
   const handleSubmit = async () => {
+    // Activar el estado de envío
+    setIsSubmitting(true);
+    
     // Enviar evento al dataLayer antes de enviar el formulario
     pushHelpClickEvent();
     
@@ -110,6 +115,9 @@ function HowCanWeHelpYou() {
     } catch (error) {
         console.error('Error al enviar los datos:', error);
         alert('Error de conexión con el servidor');
+    } finally {
+        // Desactivar el estado de envío independientemente del resultado
+        setIsSubmitting(false);
     }
   };
 
@@ -200,8 +208,25 @@ function HowCanWeHelpYou() {
             <input type="checkbox" name="newsletter" checked={formData.newsletter} onChange={handleInputChange} /> Recibir información sobre como podemos ayudarte
           </label>
           <div className="button-group">
-            <SubmitButton onClick={handleSubmit}>Enviar información</SubmitButton>
-            <SubmitButton secondary onClick={() => window.open("https://wa.me/34622377041?text=Hola,%20me%20gustaría%20agendar%20una%20asesoría%20SafeWork.", "_blank")}>Escríbenos a WhatsApp</SubmitButton>
+            <SubmitButton 
+              onClick={handleSubmit}
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? (
+                <>
+                  <span className="loader"></span>
+                  <span>Enviando...</span>
+                </>
+              ) : (
+                'Enviar información'
+              )}
+            </SubmitButton>
+            <SubmitButton 
+              secondary 
+              onClick={() => window.open("https://wa.me/34622377041?text=Hola,%20me%20gustaría%20agendar%20una%20asesoría%20SafeWork.", "_blank")}
+            >
+              Escríbenos a WhatsApp
+            </SubmitButton>
           </div>
         </FormContainer>
       )}

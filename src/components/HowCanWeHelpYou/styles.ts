@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   margin: 0;
@@ -103,6 +103,11 @@ export const NextButton = styled.button`
   font-size: 0.9rem;
 `;
 
+// Animación para el loader
+const spin = keyframes`
+  to { transform: rotate(360deg); }
+`;
+
 export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -198,4 +203,32 @@ export const SubmitButton = styled.button<{ secondary?: boolean }>`
   cursor: pointer;
   width: 15rem;
   text-align: center;
+  
+  /* Estilos para el botón con loader */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Estilo para cuando el botón está deshabilitado */
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  /* Estilo para el loader dentro del botón */
+  .loader {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: ${spin} 1s ease-in-out infinite;
+    margin-right: 8px;
+  }
+  
+  &:hover:not(:disabled) {
+    background-color: #183a6c;
+    transition: all 0.3s ease-in-out;
+  }
 `;
