@@ -92,8 +92,7 @@ export const TextContainer = styled.div`
   }
 
   button {
-    background-color: 
-#001C3C;
+    background-color: #001C3C;
     color: white;
     border: none;
     border-radius: 0.5rem;
@@ -105,7 +104,7 @@ export const TextContainer = styled.div`
 
     @media (max-width: 768px) {
       position: absolute;
-      margin-top: 68rem;
+      margin-top: 67rem;
       width: 20rem;
       align-self: center;
       padding: 1rem;
