@@ -1,26 +1,29 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  height: 40rem;
+  height: auto;
+  min-height: 40rem;
   background-color: #E6E6E6;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-top: 1rem;
+  padding: 2rem 0;
 
   @media (max-width: 768px) {
     background-color: #E6E6E6;
     top: 0;
     margin-top: 3rem;
-    padding-top: 0;
-    height: auto;
+    padding: 2rem 0 3rem 0;
   }
 `;
 
 export const TitleContainer = styled.div`
+  width: 100%;
+  max-width: 72rem;
   margin-bottom: 1rem;
-  margin-right: 36.5rem;
+  padding: 0 1rem;
   text-align: left;
 
   h1 {
@@ -30,15 +33,16 @@ export const TitleContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    margin-right: 1rem;
-    margin-left: 2rem;
+    padding: 0 2rem;
   }
 `;
 
 export const WhyUsContainer = styled.div`
   display: flex;
   gap: 2rem;
-  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 72rem;
+  padding: 0 1rem;
 
   img {
     height: 31rem;
@@ -52,14 +56,14 @@ export const WhyUsContainer = styled.div`
       height: 20rem;
       width: 20rem;
       align-self: center;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
       border-radius: 1rem;
     }
   }
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
-    margin-bottom: 5rem;
+    padding: 0 2rem;
   }
 `;
 
@@ -68,6 +72,8 @@ export const TextContainer = styled.div`
   flex-direction: column;
   gap: 1.65rem;
   width: 45rem;
+  max-width: 100%;
+  position: relative;
 
   p {
     font-family: 'Inter', sans-serif;
@@ -97,14 +103,14 @@ export const TextContainer = styled.div`
     cursor: pointer;
     width: 11rem;
     font-size: 0.9rem;
+    align-self: flex-start;
 
     @media (max-width: 768px) {
-      position: absolute;
-      margin-top: 68rem;
-      width: 20rem;
+      width: 100%;
       align-self: center;
       padding: 1rem;
       font-size: 1rem;
+      margin-top: 1rem;
     }
 
     &:hover {
@@ -114,8 +120,6 @@ export const TextContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    width: 22rem;
+    width: 100%;
   }
 `;
