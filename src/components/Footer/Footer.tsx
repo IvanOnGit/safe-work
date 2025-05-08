@@ -1,5 +1,14 @@
-import { Linkedin } from 'lucide-react';
-import { Container, InfoContainer, MapWrapper, StyledLink } from './styles';
+import { Cookie, Linkedin, Scale, Lock } from 'lucide-react';
+import { 
+  Container, 
+  DataProtection, 
+  InfoContainer, 
+  MapWrapper, 
+  StyledLink, 
+  ButtonContent, 
+  ButtonText, 
+  ButtonIcon 
+} from './styles';
 
 function Footer() {
   return (
@@ -18,13 +27,50 @@ function Footer() {
           ></iframe>
         </MapWrapper>
       </div>
+      <DataProtection>
+        <h3>Protección de datos:</h3>
+        <StyledLink to="/privacidad">
+          <button>
+            <ButtonContent>
+              <ButtonText>Política de privacidad</ButtonText>
+              <ButtonIcon><Lock /></ButtonIcon>
+            </ButtonContent>
+          </button>
+        </StyledLink>
+        <StyledLink to="/cookies">
+          <button>
+            <ButtonContent>
+              <ButtonText>Política de cookies</ButtonText>
+              <ButtonIcon><Cookie /></ButtonIcon>
+            </ButtonContent>
+          </button>
+        </StyledLink>
+        <StyledLink to="/legal">
+          <button>
+            <ButtonContent>
+              <ButtonText>Aviso legal Oficial</ButtonText>
+              <ButtonIcon><Scale /></ButtonIcon>
+            </ButtonContent>
+          </button>
+        </StyledLink>
+      </DataProtection>
       <InfoContainer>
         <h3>Información útil:</h3>
         <StyledLink to="https://www.linkedin.com/company/safeworksolutions1/posts/?feedView=all">
-            <button>Encuentranos en LinkedIn <Linkedin /></button>
+          <button>
+            <ButtonContent>
+              <ButtonText>Encuentranos en LinkedIn</ButtonText>
+              <ButtonIcon><Linkedin /></ButtonIcon>
+            </ButtonContent>
+          </button>
         </StyledLink>
         <StyledLink to="https://www.linkedin.com/in/miguelperezurzay/">
-            <button>Miguel Urzay en LinkedIn <Linkedin /></button>
+          <button>
+            <ButtonContent>
+              <ButtonText>Miguel Urzay en LinkedIn</ButtonText>
+              <ButtonIcon><Linkedin /></ButtonIcon>
+            </ButtonContent>
+          </button>
         </StyledLink>
       </InfoContainer>
     </Container>
