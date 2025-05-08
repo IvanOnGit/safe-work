@@ -48,7 +48,7 @@ function Footer() {
         <StyledLink to="/legal">
           <button>
             <ButtonContent>
-              <ButtonText>Aviso legal Oficial</ButtonText>
+              <ButtonText>Aviso legal oficial</ButtonText>
               <ButtonIcon><Scale /></ButtonIcon>
             </ButtonContent>
           </button>

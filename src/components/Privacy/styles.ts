@@ -17,6 +17,14 @@ export const Navbar = styled.div`
   width: 100%;
   height: 10rem;
 
+  svg {
+    width: 2rem;
+    color: white;
+    position: absolute;
+    left: 0;
+    margin-left: 5rem;
+  }
+
   h1 {
     color: white;
   }

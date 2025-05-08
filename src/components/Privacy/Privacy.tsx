@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Container, InnerText, Navbar } from './styles';
+import { ArrowLeftToLine } from 'lucide-react';
 
 function Privacy() {
   
@@ -10,6 +11,7 @@ function Privacy() {
   return (
     <Container>
         <Navbar>
+        <ArrowLeftToLine />
             <h1>Política de privacidad</h1>
         </Navbar>
         <InnerText>
