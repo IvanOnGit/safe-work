@@ -1,6 +1,11 @@
+import { useEffect } from 'react';
 import { Container, InnerText, Navbar } from './styles';
 
 function Privacy() {
+  
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
   return (
     <Container>
