@@ -23,6 +23,7 @@ export const Navbar = styled.div`
     position: absolute;
     left: 0;
     margin-left: 5rem;
+    cursor: pointer;
   }
 
   h1 {

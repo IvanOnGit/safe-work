@@ -8,10 +8,14 @@ function Privacy() {
         window.scrollTo(0, 0);
     }, []);
 
+    const handleGoBack = () => {
+        window.history.back();
+      };
+
   return (
     <Container>
         <Navbar>
-        <ArrowLeftToLine />
+        <ArrowLeftToLine onClick={handleGoBack} />
             <h1>Aviso legal oficial</h1>
         </Navbar>
         <InnerText>

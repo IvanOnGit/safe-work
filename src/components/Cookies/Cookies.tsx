@@ -6,12 +6,16 @@ function Cookies() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
+  
+    const handleGoBack = () => {
+      window.history.back();
+    };
 
   return (
     <Container>
         <Navbar>
-        <ArrowLeftToLine />
+        <ArrowLeftToLine onClick={handleGoBack} />
             <h1>Política de cookies</h1>
         </Navbar>
         <InnerText>
