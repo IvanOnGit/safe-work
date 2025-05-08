@@ -132,7 +132,6 @@ export const FormContainer = styled.div`
       font-family: 'Inter', sans-serif;
       cursor: pointer;
       font-size: 1rem;
-      /* Añadir display flex para alinear el loader y el texto */
       display: flex;
       align-items: center;
       justify-content: center;
