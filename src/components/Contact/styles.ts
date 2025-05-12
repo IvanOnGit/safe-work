@@ -244,3 +244,36 @@ export const ModalButton = styled.button`
     transition: all 0.3s ease-in-out;
   }
 `;
+
+export const ChecksContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+  font-family: 'Inter', sans-serif;
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+
+    input {
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    label {
+      font-size: 0.8rem;
+      text-align: justify;
+    }
+  }
+`;

@@ -7,7 +7,8 @@ import {
   ModalContent, 
   ModalTitle, 
   ModalMessage, 
-  ModalButton 
+  ModalButton,
+  ChecksContainer 
 } from './styles';
 
 // Interfaz para el modal
@@ -57,6 +58,7 @@ interface FormData {
   email: string;
   telefono: string;
   mensaje: string;
+  legal: boolean;
 }
 
 function Contact() {
@@ -64,7 +66,8 @@ function Contact() {
     nombre: "",
     email: "",
     telefono: "",
-    mensaje: ""
+    mensaje: "",
+    legal: true // Establecido como true por defecto
   });
   
   // Estado para controlar si el formulario está siendo enviado
@@ -76,12 +79,23 @@ function Contact() {
   const [modalMessage, setModalMessage] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    const { name, value, type } = e.target;
+    setFormData({ 
+      ...formData, 
+      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value 
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validar que la casilla legal esté marcada antes de enviar
+    if (!formData.legal) {
+      setModalStatus("error");
+      setModalMessage("Debe aceptar el aviso legal y la política de privacidad para continuar.");
+      setModalOpen(true);
+      return;
+    }
     
     // Activar el estado de envío
     setIsSubmitting(true);
@@ -103,7 +117,7 @@ function Contact() {
         setModalMessage(data.message || "Correo enviado correctamente");
         setModalOpen(true);
         // Resetear el formulario
-        setFormData({ nombre: "", email: "", telefono: "", mensaje: "" });
+        setFormData({ nombre: "", email: "", telefono: "", mensaje: "", legal: true });
       } else {
         // Mostrar modal de error
         setModalStatus("error");
@@ -178,10 +192,20 @@ function Contact() {
             onChange={handleChange}
             required
           ></textarea>
+          <ChecksContainer>
+            <label>
+              <input 
+                type="checkbox" 
+                name="legal" 
+                checked={formData.legal} 
+                onChange={handleChange}
+              /> He leído y acepto el aviso legal y la política de privacidad
+            </label>
+          </ChecksContainer>
           <button 
             type="submit" 
             data-gtm-label="formulario_contacto_enviar"
-            disabled={isSubmitting}
+            disabled={isSubmitting || !formData.legal}
           >
             {isSubmitting ? (
               <>
