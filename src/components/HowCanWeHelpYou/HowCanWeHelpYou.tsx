@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import Stepper from '../Stepper/Stepper';
-import { ButtonsContainer, Container, FormContainer, Input, NextButton, SubmitButton, TextContainer, ModalOverlay, ModalContent, ModalTitle, ModalMessage, ModalButton } from './styles';
+import { ButtonsContainer, Container, FormContainer, Input, NextButton, SubmitButton, TextContainer, ModalOverlay, ModalContent, ModalTitle, ModalMessage, ModalButton, ChecksContainer } from './styles';
 
 // Modal component extracted from Contact.tsx
 interface ModalProps {
@@ -46,7 +46,7 @@ const Modal = ({ isOpen, onClose, status, message }: ModalProps) => {
 function HowCanWeHelpYou() {
   const [currentStep, setCurrentStep] = useState(1);
   const [answers, setAnswers] = useState<(string | string[])[]>([]);
-  const [formData, setFormData] = useState({ firstName: '', lastName: '', email: '', phone: '', newsletter: true });
+  const [formData, setFormData] = useState({ firstName: '', lastName: '', email: '', phone: '', newsletter: true, legal: true });
   const [isVisible, setIsVisible] = useState(false);
   // Estado para controlar si el formulario está siendo enviado
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -166,7 +166,7 @@ function HowCanWeHelpYou() {
             setModalMessage(data.message || "¡Formulario enviado con éxito!");
             setModalOpen(true);
             // Resetear el formulario
-            setFormData({ firstName: '', lastName: '', email: '', phone: '', newsletter: true });
+            setFormData({ firstName: '', lastName: '', email: '', phone: '', newsletter: true, legal: true });
             setCurrentStep(1);
             setAnswers([]);
         } else {
@@ -270,9 +270,14 @@ function HowCanWeHelpYou() {
             <Input type="email" name="email" placeholder="Email" required value={formData.email} onChange={handleInputChange} />
             <Input type="tel" name="phone" placeholder="Teléfono de contacto" required value={formData.phone} onChange={handleInputChange} />
           </div>
-          <label>
-            <input type="checkbox" name="newsletter" checked={formData.newsletter} onChange={handleInputChange} /> Recibir información sobre como podemos ayudarte
-          </label>
+          <ChecksContainer>
+            <label>
+              <input type="checkbox" name="newsletter" checked={formData.newsletter} onChange={handleInputChange} /> Recibir información sobre como podemos ayudarte
+            </label>
+            <label>
+              <input type="checkbox" name="legal" checked={formData.legal} onChange={handleInputChange} /> He leido y acepto el aviso legal y la política de privacidad
+            </label>
+          </ChecksContainer>
           <div className="button-group">
             <SubmitButton 
               onClick={handleSubmit}

@@ -136,7 +136,6 @@ export const FormContainer = styled.div`
   .button-group {
     display: flex;
     gap: 1rem;
-    margin-top: 1rem;
 
     button {
       padding: 1rem;
@@ -296,5 +295,36 @@ export const ModalButton = styled.button`
   &:hover {
     background-color: #183a6c;
     transition: all 0.3s ease-in-out;
+  }
+`;
+
+export const ChecksContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+
+    input {
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+
+    label {
+      font-size: 0.8rem;
+      text-align: justify;
+    }
   }
 `;
