@@ -13,6 +13,11 @@ export const Container = styled.div`
     img {
         width: 20rem;
     }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 1rem;
+    }
 `;
 
 export const TextContainer = styled.div`
@@ -41,5 +46,20 @@ export const TextContainer = styled.div`
         padding: 0.5rem 1rem;
         cursor: pointer;
         margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            text-align: center;
+        }
+
+        button {
+            width: 80%;
+            padding: 1rem;
+            font-size: 1rem;
+        }
     }
 `;
