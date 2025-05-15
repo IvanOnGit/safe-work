@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { Container } from './styles';
+import { Container, TextContainer } from './styles';
 
 function ErrorPage() {
     const navigate = useNavigate();
@@ -10,8 +10,14 @@ function ErrorPage() {
 
     return (
         <Container>
-            <h1>Ups, esta página no existe</h1>
-            <button onClick={handleGoBack}>Volver atrás</button>
+            <div>
+                <img src="/images/OversightWorker.svg" alt="" />
+            </div>
+            <TextContainer>
+                <h1>404</h1>
+                <h2>Ups, esta página no existe.</h2>
+                <button onClick={handleGoBack}>Volver atrás</button>
+            </TextContainer>
         </Container>
     );
 }
