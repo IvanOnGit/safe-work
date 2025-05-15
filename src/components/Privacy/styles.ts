@@ -24,6 +24,10 @@ export const Navbar = styled.div`
     left: 0;
     margin-left: 5rem;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+      margin-left: 1rem;
+    }
   }
 
   h1 {
@@ -37,4 +41,13 @@ export const InnerText = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: justify;
+
+  
+  @media (max-width: 768px) {
+    width: 80%;
+    
+    h2 {
+      text-align: center;
+    }
+  }
 `;
