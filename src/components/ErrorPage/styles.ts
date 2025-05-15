@@ -9,4 +9,13 @@ export const Container = styled.div`
     font-family: 'Inter', sans-serif;
     color: white;
     height: 100vh;
+
+    button {
+        background-color: white;
+        color: #001C3C;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+    }
 `;
