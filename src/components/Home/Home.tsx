@@ -23,8 +23,14 @@ function Home() {
           </p>
         </TextContainer>
         <VideoContainer>
-          <img src="/images/MiguelPerezUrzay.jpg" alt="" />
-          <p>Miguel Pérez Urzay | Director | Psicólogo Forense y Sanitario | Docente Universitario | Epsecialista en Peritaje de Acoso Laboral</p>
+        <iframe
+          src="https://www.youtube.com/embed/22zvzKSShPA?rel=0&autoplay=0&modestbranding=1"
+          title="YouTube video"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+        <p>Miguel Pérez Urzay | Director | Psicólogo Forense y Sanitario | Docente Universitario | Especialista en Peritaje de Acoso Laboral</p>
         </VideoContainer>
         <HowCanWeHelpYou />
       </Container>

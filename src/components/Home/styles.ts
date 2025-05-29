@@ -63,6 +63,20 @@ export const VideoContainer = styled.div`
     justify-content: center;
     align-items: center;
 
+    iframe {
+    width: 30rem;
+    height: 17rem;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 12px;
+
+    @media (min-width: 768px) and (max-width: 1024px) {   
+    iframe {
+        width: 25rem;
+        height: 14rem;
+    }
+    }
+    }
+
     img {
         width: 28rem;
         height: 28rem;
