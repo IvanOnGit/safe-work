@@ -160,30 +160,31 @@ function HowCanWeHelpYou() {
 
         const data = await response.json();
 
-        if (response.ok) {
-            // Mostrar modal de éxito en lugar de alert
-            setModalStatus("success");
-            setModalMessage(data.message || "¡Formulario enviado con éxito!");
-            setModalOpen(true);
-            // Resetear el formulario
-            setFormData({ firstName: '', lastName: '', email: '', phone: '', newsletter: true, legal: true });
-            setCurrentStep(1);
-            setAnswers([]);
-        } else {
-            // Mostrar modal de error en lugar de alert
-            setModalStatus("error");
-            setModalMessage(data.error || "Hubo un error al enviar el formulario. Intente más tarde.");
-            setModalOpen(true);
-        }
-    } catch (error) {
-        console.error('Error al enviar los datos:', error);
-        // Mostrar modal de error en lugar de alert
-        setModalStatus("error");
-        setModalMessage("Error de conexión con el servidor. Intente más tarde.");
+         if (response.ok) {
+        setModalStatus("success");
+        setModalMessage(data.message || "¡Formulario enviado con éxito!");
         setModalOpen(true);
+
+        setFormData({ firstName: '', lastName: '', email: '', phone: '', newsletter: true, legal: true });
+        setCurrentStep(1);
+        setAnswers([]);
+
+        // ✅ Redirigir a Calendly después de 3 segundos
+        setTimeout(() => {
+          window.location.href = "https://calendly.com/safeworkconsultagratuita/30min";
+        }, 3000);
+      } else {
+        setModalStatus("error");
+        setModalMessage(data.error || "Hubo un error al enviar el formulario. Intente más tarde.");
+        setModalOpen(true);
+      }
+    } catch (error) {
+      console.error('Error al enviar los datos:', error);
+      setModalStatus("error");
+      setModalMessage("Error de conexión con el servidor. Intente más tarde.");
+      setModalOpen(true);
     } finally {
-        // Desactivar el estado de envío independientemente del resultado
-        setIsSubmitting(false);
+      setIsSubmitting(false);
     }
   };
 
@@ -289,14 +290,8 @@ function HowCanWeHelpYou() {
                   <span>Enviando...</span>
                 </>
               ) : (
-                'Enviar información'
+                'Enviar y agendar consultoría'
               )}
-            </SubmitButton>
-            <SubmitButton 
-              secondary 
-              onClick={() => window.open("https://wa.me/34622377041?text=Hola,%20me%20gustaría%20agendar%20una%20asesoría%20SafeWork.", "_blank")}
-            >
-              Escríbenos a WhatsApp
             </SubmitButton>
           </div>
         </FormContainer>
