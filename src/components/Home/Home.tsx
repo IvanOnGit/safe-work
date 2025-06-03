@@ -1,5 +1,6 @@
 import BookAssestmentSection from '../BookAssestmentSection/BookAssestmentSection';
 import Contact from '../Contact/Contact';
+import FloatingButton from '../FloatingButton/FloatingButton';
 import Footer from '../Footer/Footer';
 import HowCanWeHelpYou from '../HowCanWeHelpYou/HowCanWeHelpYou';
 import Navbar from '../Navbar/Navbar';
@@ -40,6 +41,7 @@ function Home() {
       <WhyUs />
       <Contact />
       <Footer />
+      <FloatingButton />
     </>
   );
 }
