@@ -154,8 +154,8 @@ function Contact() {
           Estamos aquí para ayudarte a dar el primer paso, con respeto, escucha y total discreción.
         </p>
 
-        <button onClick={() => window.open('https://wa.me/34622377041?text=Hola, me gustaría saber más sobre sus servicios.', '_blank')}>
-          Escríbenos por WhatsApp
+        <button onClick={() => window.open('https://calendly.com/safeworkconsultagratuita/30min')}>
+          Cuéntanos tu situación
         </button>
       </TextContainer>
 

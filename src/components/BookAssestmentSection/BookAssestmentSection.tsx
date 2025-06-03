@@ -52,7 +52,7 @@ function BookAssestmentSection() {
           y defender tus derechos con confianza.
         </p>
         <button 
-          onClick={() => window.open("https://wa.me/34622377041?text=Hola,%20me%20gustaría%20agendar%20una%20asesoría%20SafeWork.", "_blank")}
+          onClick={() => window.open("https://calendly.com/safeworkconsultagratuita/30min")}
         >
           Agenda una asesoría
         </button>

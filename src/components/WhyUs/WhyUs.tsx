@@ -39,8 +39,7 @@ function WhyUs() {
             <button
               onClick={() =>
                 window.open(
-                  "https://wa.me/34622377041?text=Hola,%20me%20gustaría%20agendar%20una%20asesoría%20SafeWork.",
-                  "_blank"
+                  "https://calendly.com/safeworkconsultagratuita/30min"
                 )
               }
             >
