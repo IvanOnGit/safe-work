@@ -32,6 +32,10 @@ export const TextContainer = styled.div`
         font-size: 1.1rem;
         word-spacing: 0.25rem;
         text-align: justify;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     @media (max-width: 768px) {
@@ -64,35 +68,19 @@ export const VideoContainer = styled.div`
     align-items: center;
 
     iframe {
-    width: 30rem;
-    height: 17rem;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    border-radius: 12px;
-
-    @media (min-width: 768px) and (max-width: 1024px) {   
-    iframe {
-        width: 25rem;
-        height: 14rem;
-    }
-    }
-    }
-
-    img {
-        width: 28rem;
-        height: 28rem;
-        object-fit: contain;
-        object-position: center;
+        width: 30rem;
+        height: 17rem;
         box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    }
+        border-radius: 12px;
 
-    @media (max-width: 768px) {
-        display: none;
-    }
-
-    @media (min-width: 768px) and (max-width: 1024px) {   
-        img {
-            width: 25rem;
-            height: 15rem;
+        @media (max-width: 768px) {
+            width: 20rem;
+            height: 11.25rem;
+        }   
+        
+        @media (max-width: 480px) {
+            width: 21rem;
+            height: 12rem;
         }
     }
 
@@ -102,6 +90,17 @@ export const VideoContainer = styled.div`
         font-size: 1rem;
         text-align: center;
         width: 30rem;
+
+        @media (max-width: 768px) {
+            width: 90%;
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        width: 90%;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
     }
 `;
 
