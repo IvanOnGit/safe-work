@@ -25,7 +25,8 @@ function Home() {
         </TextContainer>
         <VideoContainer>
         <iframe
-          src="https://www.youtube.com/embed/22zvzKSShPA?rel=0&autoplay=0&modestbranding=1"
+          id="youtube-player"
+          src="https://www.youtube.com/embed/22zvzKSShPA?rel=0&autoplay=0&modestbranding=1&enablejsapi=1"
           title="YouTube video"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
