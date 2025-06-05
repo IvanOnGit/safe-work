@@ -170,9 +170,8 @@ function HowCanWeHelpYou() {
         setAnswers([]);
 
         // ✅ Redirigir a Calendly después de 3 segundos
-        setTimeout(() => {
-          window.location.href = "https://calendly.com/safeworkconsultagratuita/30min";
-        }, 3000);
+        window.location.href = "https://calendly.com/safeworkconsultagratuita/30min";
+        
       } else {
         setModalStatus("error");
         setModalMessage(data.error || "Hubo un error al enviar el formulario. Intente más tarde.");
