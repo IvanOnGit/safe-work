@@ -83,6 +83,10 @@ export const TreeContainer = styled.div`
     background: linear-gradient(180deg,rgb(20, 23, 208), #001C3C);
     transform: translateX(-50%);
     z-index: 1;
+
+    @media (max-width: 768px) {
+      left: 10%;
+    }
   }
 `;
 
@@ -154,18 +158,33 @@ export const BranchContent = styled.div`
     margin-left: -80px;
     animation: ${fadeInLeft} 0.8s ease 0s forwards;
     width: 45%;
+
+    @media (max-width: 768px) {
+      margin-left: 1rem;
+      width: 80%;
+    }
   }
   
   ${MainBranch}:nth-child(2) & {
     margin-right: -220px;
     animation: ${fadeInRight} 0.8s ease 0.2s forwards;
     width: 60%;
+    @media (max-width: 768px) {
+      margin-right: 0;
+      margin-left: 0rem;
+      width: 80%;
+    }
   }
   
   ${MainBranch}:nth-child(3) & {
     margin-left: -180px;
     animation: ${fadeInLeft} 0.8s ease 0.4s forwards;
     width: 55%;
+    @media (max-width: 768px) {
+      margin-left: 1rem;
+      width: 80%;
+    }
+
   }
   
   &:hover {
@@ -196,6 +215,11 @@ export const BranchDescription = styled.p`
   line-height: 1.6;
   margin: 0;
   text-align: left !important;
+
+  @media (max-width: 768px) {
+    text-align: justify;
+    width: 100%;
+  }
 `;
 
 export const CTAButton = styled.button`
