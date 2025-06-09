@@ -30,7 +30,6 @@ export const Container = styled.section`
         height: auto;
         opacity: 1;
         transform: none;
-        margin-top: 40rem;
         padding: 0;
         gap: 2rem;
         width: 90%;

@@ -50,6 +50,21 @@ export const Container = styled.div`
     margin-bottom: 1rem;
     max-width: 700px;
   }
+
+  @media (max-width: 768px) {
+    margin-top: 45rem;
+
+    h1 {
+      font-size: 1.5rem;
+      width: 80%;
+    }
+
+    p {
+      font-size: 1rem;
+      width: 80%;
+      text-align: justify;
+    }
+  }
 `;
 
 export const TreeContainer = styled.div`
