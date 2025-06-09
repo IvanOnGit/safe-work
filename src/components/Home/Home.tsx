@@ -5,6 +5,7 @@ import Footer from '../Footer/Footer';
 import HowCanWeHelpYou from '../HowCanWeHelpYou/HowCanWeHelpYou';
 import Navbar from '../Navbar/Navbar';
 import OurServices from '../OurServices/OurServices';
+import Pathing from '../Pathing/Pathing';
 import Recomendations from '../Recomendations/Recomendations';
 import WhyUs from '../WhyUs/WhyUs';
 import { Container, TextContainer, VideoContainer } from './styles';
@@ -36,6 +37,7 @@ function Home() {
         </VideoContainer>
         <HowCanWeHelpYou />
       </Container>
+      <Pathing />
       <BookAssestmentSection />
       <OurServices />
       <Recomendations />

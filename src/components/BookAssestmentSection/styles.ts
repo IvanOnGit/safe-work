@@ -10,7 +10,7 @@ export const Container = styled.section`
     padding: 0 5rem;
     max-width: 1200px;
     width: 100%;
-    margin: 24rem auto 0 auto;
+    margin: 0 auto 0 auto;
 
     @media (min-width: 768px) {
         opacity: 0;
