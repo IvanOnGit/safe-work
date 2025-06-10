@@ -80,7 +80,7 @@ export const TreeContainer = styled.div`
     top: 0;
     bottom: 52px;
     width: 2px;
-    background: linear-gradient(180deg,rgb(20, 23, 208), #001C3C);
+    background: linear-gradient(180deg, #001C3C, #001C3C);
     transform: translateX(-50%);
     z-index: 1;
 
@@ -113,7 +113,7 @@ export const MainBranch = styled.div`
 export const BranchLine = styled.div`
   position: absolute;
   height: 2px;
-  background: linear-gradient(90deg, rgb(20, 23, 208), #001C3C);
+  background: linear-gradient(90deg, #001C3C, #001C3C);
   z-index: 2;
   top: 50%;
   transform: translateY(-50%);
@@ -195,7 +195,7 @@ export const BranchContent = styled.div`
 `;
 
 export const BranchTitle = styled.h3`
-  color:rgb(16, 2, 143);
+  color: #001C3C;
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -223,7 +223,7 @@ export const BranchDescription = styled.p`
 `;
 
 export const CTAButton = styled.button`
-  background: linear-gradient(135deg,rgb(11, 0, 212),rgb(0, 35, 160));
+  background: linear-gradient(135deg, #001C3C, #001C3C);
   color: #ffffff;
   border: none;
   padding: 1rem 2.5rem;
@@ -238,7 +238,7 @@ export const CTAButton = styled.button`
   
   &:hover {
     transform: translateY(-2px);
-    background: linear-gradient(135deg,rgb(0, 16, 160),rgb(0, 7, 212));
+    background: linear-gradient(135deg, #001C3C, #001C3C);
   }
   
   &:active {

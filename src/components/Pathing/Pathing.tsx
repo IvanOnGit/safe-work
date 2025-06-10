@@ -15,7 +15,6 @@ function Pathing() {
           <BranchLine />
           <BranchContent>
             <BranchTitle>Consulta inicial gratuita</BranchTitle>
-            <BranchSubtitle>Duración: 15 minutos</BranchSubtitle>
             <BranchDescription>
               Un primer encuentro breve y sin compromiso para analizar de forma preliminar tu
               situación, identificar posibles indicios de acoso laboral y resolver cualquier duda sobre
