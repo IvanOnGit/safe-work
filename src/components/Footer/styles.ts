@@ -74,7 +74,7 @@ export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 70%;
-  width: 14rem;
+  width: 17rem;
   gap: 2rem;
 
   button {
@@ -127,7 +127,7 @@ export const DataProtection = styled.div`
   display: flex;
   flex-direction: column;
   height: 70%;
-  width: 12rem;
+  width: 17rem;
   gap: 2rem;
   margin-right: 2rem;
 
