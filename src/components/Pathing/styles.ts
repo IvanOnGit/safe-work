@@ -191,6 +191,11 @@ export const BranchContent = styled.div`
     transform: translateY(-5px);
     transition: all 0.3s ease;
     box-shadow: 0 10px 30px rgb(10, 12, 132, 0.5);
+
+    @media (max-width: 768px) {
+      transform: none;
+      box-shadow: none;
+    }
   }
 `;
 
