@@ -160,8 +160,10 @@ export const BranchContent = styled.div`
     width: 45%;
 
     @media (max-width: 768px) {
-      margin-left: 1rem;
-      width: 80%;
+      margin-left: 3.5rem;
+      width: 100%;
+      backdrop-filter: none;
+      padding: 0rem;
     }
   }
   
@@ -171,8 +173,10 @@ export const BranchContent = styled.div`
     width: 60%;
     @media (max-width: 768px) {
       margin-right: 0;
-      margin-left: 0rem;
-      width: 80%;
+      margin-left: 3.5rem;
+      padding: 0rem;
+      width: 100%;
+      backdrop-filter: none;
     }
   }
   
@@ -181,8 +185,11 @@ export const BranchContent = styled.div`
     animation: ${fadeInLeft} 0.8s ease 0.4s forwards;
     width: 55%;
     @media (max-width: 768px) {
-      margin-left: 1rem;
-      width: 80%;
+      margin-left: 3.5rem;
+      padding: 0rem;
+      width: 100%;
+      backdrop-filter: none;
+      text-align: justify;
     }
 
   }
@@ -205,6 +212,11 @@ export const BranchTitle = styled.h3`
   font-weight: bold;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
+
+  @media (max-width: 768px) {
+    width: 75%;
+    text-align: justify;
+  }
 `;
 
 export const BranchSubtitle = styled.h4`
@@ -222,7 +234,7 @@ export const BranchDescription = styled.p`
   text-align: left !important;
 
   @media (max-width: 768px) {
-    text-align: justify;
+    text-align: justify !important;
     width: 100%;
   }
 `;
@@ -249,4 +261,4 @@ export const CTAButton = styled.button`
   &:active {
     transform: translateY(0);
   }
-`;
+`;  
