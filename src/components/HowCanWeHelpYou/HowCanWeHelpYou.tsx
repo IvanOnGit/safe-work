@@ -201,7 +201,7 @@ function HowCanWeHelpYou() {
                 key={index}
                 onClick={() => handleSelectOption(option)}
                 style={{
-                  backgroundColor: answers[currentStep - 1] === option ? '#001C3C' : 'white',
+                  backgroundColor: answers[currentStep - 1] === option ? '#88123c' : 'white',
                   color: answers[currentStep - 1] === option ? 'white' : '#001C3C'
                 }}
               >
@@ -227,7 +227,7 @@ function HowCanWeHelpYou() {
                 key={index}
                 onClick={() => handleSelectOption(option)}
                 style={{
-                  backgroundColor: Array.isArray(answers[currentStep - 1]) && answers[currentStep - 1].includes(option) ? '#001C3C' : 'white',
+                  backgroundColor: Array.isArray(answers[currentStep - 1]) && answers[currentStep - 1].includes(option) ? '#88123c' : 'white',
                   color: Array.isArray(answers[currentStep - 1]) && answers[currentStep - 1].includes(option) ? 'white' : '#001C3C'
                 }}
               >
@@ -248,7 +248,7 @@ function HowCanWeHelpYou() {
                 key={index}
                 onClick={() => handleSelectOption(option)}
                 style={{
-                  backgroundColor: Array.isArray(answers[currentStep - 1]) && answers[currentStep - 1].includes(option) ? '#001C3C' : 'white',
+                  backgroundColor: Array.isArray(answers[currentStep - 1]) && answers[currentStep - 1].includes(option) ? '#88123c' : 'white',
                   color: Array.isArray(answers[currentStep - 1]) && answers[currentStep - 1].includes(option) ? 'white' : '#001C3C'
                 }}
               >

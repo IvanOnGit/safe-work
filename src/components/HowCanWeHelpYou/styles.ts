@@ -95,12 +95,18 @@ export const ButtonsContainer = styled.div`
 `;
 
 export const NextButton = styled.button`
-  background-color: #001C3C;
+  background-color: #88213c;
   color: white;
   padding: 1rem;
   border: none;
   cursor: pointer;
   font-size: 0.9rem;
+
+    &:hover {
+        background-color: #c52138;
+        color: white;
+        transition: all 0.3s ease-in-out;
+    }
 `;
 
 // Animación para el loader
@@ -142,7 +148,7 @@ export const FormContainer = styled.div`
     }
 
     button:hover {
-        background-color: #183a6c;
+        background-color: #c52138;
         color: white;
         transition: all 0.3s ease-in-out;
     }
@@ -195,7 +201,7 @@ export const Input = styled.input`
 `;
 
 export const SubmitButton = styled.button<{ secondary?: boolean }>`
-  background-color: ${({ secondary }) => (secondary ? "#001C3C" : "#001C3C")};
+  background-color: ${({ secondary }) => (secondary ? "#88213c" : "#88213c")};
   color: white;
   padding: 0.5rem;
   border: none;
