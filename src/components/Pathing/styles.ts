@@ -292,6 +292,14 @@ export const BranchDescription = styled.p`
 
   @media (max-width: 768px) {
     text-align: justify !important;
+    text-justify: inter-word;
+    text-align-last: left;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    word-spacing: -0.05em;
+    overflow-wrap: break-word;
+    word-break: break-word;
     width: 100%;
     color: #333;
     font-size: 0.85rem;
