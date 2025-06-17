@@ -127,6 +127,35 @@ export const MainBranch = styled.div`
       background: #001C3C;
       z-index: 2;
     }
+
+    &::before {
+      position: absolute;
+      left: calc(10% + 60px);
+      top: calc(2rem - 10px);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #001C3C;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+    }
+    
+    &:nth-child(1)::before {
+      content: '1';
+    }
+    
+    &:nth-child(2)::before {
+      content: '2';
+    }
+    
+    &:nth-child(3)::before {
+      content: '3';
+    }
   }
 `;
 
@@ -241,7 +270,7 @@ export const BranchTitle = styled.h3`
   letter-spacing: 1px;
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: 80%;
     text-align: left;
     font-size: 0.95rem;
   }
