@@ -7,7 +7,6 @@ import Navbar from '../Navbar/Navbar';
 import OurServices from '../OurServices/OurServices';
 import Pathing from '../Pathing/Pathing';
 import Recomendations from '../Recomendations/Recomendations';
-import WhyUs from '../WhyUs/WhyUs';
 import { Container, TextContainer, VideoContainer } from './styles';
 
 function Home() {
@@ -41,7 +40,6 @@ function Home() {
       <BookAssestmentSection />
       <OurServices />
       <Recomendations />
-      <WhyUs />
       <Contact />
       <Footer />
       <FloatingButton />

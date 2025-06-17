@@ -49,6 +49,10 @@ export const Container = styled.div`
     line-height: 1.6;
     margin-bottom: 1rem;
     max-width: 700px;
+
+    &.subtitle {
+      display: none;
+    }
   }
 
   @media (max-width: 768px) {

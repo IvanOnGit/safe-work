@@ -4,10 +4,10 @@ function Pathing() {
   return (
     <Container>
       <h1>¿Cómo te ayudamos a salir de una situación de acoso laboral?</h1>
-      <p>Si estás atravesando una situación de acoso laboral, conflicto con tu empresa o
+      <p className='subtitle'>Si estás atravesando una situación de acoso laboral, conflicto con tu empresa o
       sientes que tu entorno de trabajo está afectando tu salud mental, este es el recorrido
       que seguimos contigo.</p>
-      <p>Te acompañamos paso a paso para que entiendas tus opciones, evalúes la viabilidad
+      <p className='subtitle'>Te acompañamos paso a paso para que entiendas tus opciones, evalúes la viabilidad
       legal y pericial de tu caso, y tomes decisiones informadas con respaldo profesional.</p>
       
       <TreeContainer>
