@@ -244,7 +244,7 @@ export const BranchDescription = styled.p`
 `;
 
 export const CTAButton = styled.button`
-  background: linear-gradient(135deg, #001C3C, #001C3C);
+  background: linear-gradient(135deg, #88123c, #88123c);
   color: #ffffff;
   border: none;
   padding: 1rem 2.5rem;
@@ -259,7 +259,7 @@ export const CTAButton = styled.button`
   
   &:hover {
     transform: translateY(-2px);
-    background: linear-gradient(135deg, #001C3C, #001C3C);
+    background: linear-gradient(135deg, #c52138, #c52138);
   }
   
   &:active {

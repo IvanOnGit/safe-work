@@ -52,7 +52,7 @@ export const TextContainer = styled.div`
   }
 
   button {
-    background-color: #001C3C;
+    background-color: #88123c;
     color: white;
     border: none;
     border-radius: 0.5rem;
@@ -67,7 +67,7 @@ export const TextContainer = styled.div`
     }
 
     &:hover {
-      background-color: #183a6c;
+      background-color: #c52138;
       transition: all 0.3s ease-in-out;
     }
   }
@@ -125,7 +125,7 @@ export const FormContainer = styled.div`
 
     button {
       border: none;
-      background-color: #001C3C;
+      background-color: #88123c;
       color: white;
       padding: 1rem;
       border-radius: 0.5rem;
@@ -141,7 +141,7 @@ export const FormContainer = styled.div`
       }
 
       &:hover {
-        background-color: #183a6c;
+        background-color: #c52138;
         transition: all 0.3s ease-in-out;
       }
 

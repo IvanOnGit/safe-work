@@ -84,7 +84,8 @@ export const TextContainer = styled.div`
     }
 
     button:hover {
-        background-color: #001C3C;
+        background-color: #88123c;
+        border: 1px solid white;
         color: white;
         transition: all 0.3s ease-in-out;
     }
