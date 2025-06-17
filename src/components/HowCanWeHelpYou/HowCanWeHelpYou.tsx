@@ -188,7 +188,7 @@ function HowCanWeHelpYou() {
   };
 
   return (
-    <Container id="how-can-we-help-you" ref={containerRef} className={isVisible ? 'visible' : ''}>
+    <Container ref={containerRef} className={isVisible ? 'visible' : ''}>
       <Stepper currentStep={currentStep} />
 
       {currentStep === 1 && (

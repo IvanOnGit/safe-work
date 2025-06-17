@@ -3,7 +3,7 @@ import { Container, TextContainer, TitleContainer, WhyUsContainer } from './styl
 function WhyUs() {
   return (
     <>
-      <Container id="why-us">
+      <Container>
         <TitleContainer>
           <h1>Dar el paso no es fácil, pero puede cambiarlo todo</h1>
         </TitleContainer>

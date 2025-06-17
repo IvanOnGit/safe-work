@@ -4,7 +4,7 @@ import { Container, ServiceCard, IconWrapper, Title, List, TextContainer, Mobile
 function OurServices() {
     return (
         <>
-            <TextContainer>
+            <TextContainer id="services">
                 <h1>Un acompañamiento integral, adaptado a lo que necesitas</h1>
                 <h2>
                 Puedes acceder a cada servicio por separado o a un plan de acción 

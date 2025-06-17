@@ -1,8 +1,10 @@
 import { Container, TreeContainer, MainBranch, BranchLine, BranchContent, BranchTitle, BranchSubtitle, BranchDescription, CTAButton } from './styles';
 
 function Pathing() {
+
+  
   return (
-    <Container>
+    <Container id="how-can-we-help-you">
       <h1>¿Cómo te ayudamos a salir de una situación de acoso laboral?</h1>
       <p className='subtitle'>Si estás atravesando una situación de acoso laboral, conflicto con tu empresa o
       sientes que tu entorno de trabajo está afectando tu salud mental, este es el recorrido

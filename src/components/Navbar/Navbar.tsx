@@ -23,7 +23,7 @@ function Navbar() {
     if (element) {
       element.scrollIntoView({
         behavior: 'smooth',
-        block: 'center',
+        block: 'start',
         inline: 'nearest'
       });
     }
@@ -64,7 +64,7 @@ function Navbar() {
           Cómo podemos ayudarte
         </a>
         <a href="#recomendations" onClick={(e) => handleScroll(e, 'recomendations')}>Casos de éxito</a>
-        <a href="#why-us" onClick={(e) => handleScroll(e, 'why-us')}>Sobre Nosotros</a>
+        <a href="#services" onClick={(e) => handleScroll(e, 'services')}>Sobre Nosotros</a>
         <a href="#contact" onClick={(e) => handleScroll(e, 'contact')}>Contacto</a>
       </ContainerLinks>
 
@@ -85,7 +85,7 @@ function Navbar() {
           Cómo podemos ayudarte
         </a>
         <a href="#recomendations" onClick={() => handleScrollToTopMobile('recomendations')}>Casos de éxito</a>
-        <a href="#why-us" onClick={() => handleScrollToTopMobile('why-us')}>Sobre Nosotros</a>
+        <a href="#services" onClick={() => handleScrollToTopMobile('services')}>Sobre Nosotros</a>
         <a href="#contact" onClick={() => handleScrollToTopMobile('contact')}>Contacto</a>
       </MobileMenu>
     </Container>
