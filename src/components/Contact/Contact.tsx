@@ -154,7 +154,7 @@ function Contact() {
           Estamos aquí para ayudarte a dar el primer paso, con respeto, escucha y total discreción.
         </p>
 
-        <button onClick={() => window.open('https://calendly.com/safeworkconsultagratuita/30min')}>
+        <button onClick={() => window.open('https://calendly.com/safeworkconsultagratuita/20min')}>
           Cuéntanos tu situación
         </button>
       </TextContainer>

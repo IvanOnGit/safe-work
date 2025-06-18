@@ -39,7 +39,7 @@ function WhyUs() {
             <button
               onClick={() =>
                 window.open(
-                  "https://calendly.com/safeworkconsultagratuita/30min"
+                  "https://calendly.com/safeworkconsultagratuita/20min"
                 )
               }
             >

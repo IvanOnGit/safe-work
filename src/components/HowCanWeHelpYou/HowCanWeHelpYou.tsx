@@ -170,7 +170,7 @@ function HowCanWeHelpYou() {
         setAnswers([]);
 
         // ✅ Redirigir a Calendly después de 3 segundos
-        window.location.href = "https://calendly.com/safeworkconsultagratuita/30min";
+        window.location.href = "https://calendly.com/safeworkconsultagratuita/20min";
         
       } else {
         setModalStatus("error");
