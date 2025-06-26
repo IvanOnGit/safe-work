@@ -88,8 +88,31 @@ function HowCanWeHelpYou() {
     };
   }, []);
 
+  // Función para validar si el paso actual está completo
+  const isCurrentStepValid = (): boolean => {
+    const stepIndex = currentStep - 1;
+    
+    if (currentStep === 1) {
+      // Paso 1: Debe tener una respuesta
+      return answers[stepIndex] !== undefined && answers[stepIndex] !== '';
+    } else if (currentStep === 2 || currentStep === 3) {
+      // Paso 2 y 3: Debe tener al menos una selección
+      return Array.isArray(answers[stepIndex]) && answers[stepIndex].length > 0;
+    } else if (currentStep === 4) {
+      // Paso 4: Todos los campos obligatorios deben estar completos
+      return (
+        formData.firstName.trim() !== '' &&
+        formData.email.trim() !== '' &&
+        formData.phone.trim() !== '' &&
+        formData.legal === true // El checkbox legal debe estar marcado
+      );
+    }
+    
+    return false;
+  };
+
   const handleNext = () => {
-    if (currentStep < 4) {
+    if (isCurrentStepValid() && currentStep < 4) {
       setCurrentStep(currentStep + 1);
     }
   };
@@ -141,6 +164,14 @@ function HowCanWeHelpYou() {
   };
 
   const handleSubmit = async () => {
+    // Verificar que el formulario esté válido antes de enviar
+    if (!isCurrentStepValid()) {
+      setModalStatus("error");
+      setModalMessage("Por favor completa todos los campos obligatorios antes de enviar.");
+      setModalOpen(true);
+      return;
+    }
+
     // Activar el estado de envío
     setIsSubmitting(true);
     
@@ -264,24 +295,64 @@ function HowCanWeHelpYou() {
           <h1>¿Cómo podemos contactarte?</h1>
           <h2>Ingresa tu información debajo</h2>
           <div className="input-group">
-            <Input type="text" name="firstName" placeholder="Primer nombre" required value={formData.firstName} onChange={handleInputChange} />
+            <Input 
+              type="text" 
+              name="firstName" 
+              placeholder="Primer nombre *" 
+              required 
+              value={formData.firstName} 
+              onChange={handleInputChange}
+              style={{
+                borderColor: formData.firstName.trim() === '' ? '#ff6b6b' : undefined
+              }}
+            />
           </div>
           <div className="input-group">
-            <Input type="email" name="email" placeholder="Email" required value={formData.email} onChange={handleInputChange} />
-            <Input type="tel" name="phone" placeholder="Teléfono de contacto" required value={formData.phone} onChange={handleInputChange} />
+            <Input 
+              type="email" 
+              name="email" 
+              placeholder="Email *" 
+              required 
+              value={formData.email} 
+              onChange={handleInputChange}
+              style={{
+                borderColor: formData.email.trim() === '' ? '#ff6b6b' : undefined
+              }}
+            />
+            <Input 
+              type="tel" 
+              name="phone" 
+              placeholder="Teléfono de contacto *" 
+              required 
+              value={formData.phone} 
+              onChange={handleInputChange}
+              style={{
+                borderColor: formData.phone.trim() === '' ? '#ff6b6b' : undefined
+              }}
+            />
           </div>
           <ChecksContainer>
             <label>
               <input type="checkbox" name="newsletter" checked={formData.newsletter} onChange={handleInputChange} /> Recibir información sobre como podemos ayudarte
             </label>
-            <label>
-              <input type="checkbox" name="legal" checked={formData.legal} onChange={handleInputChange} /> He leido y acepto el aviso legal y la política de privacidad
+            <label style={{ color: !formData.legal ? '#ff6b6b' : undefined }}>
+              <input 
+                type="checkbox" 
+                name="legal" 
+                checked={formData.legal} 
+                onChange={handleInputChange}
+                required
+              /> He leido y acepto el aviso legal y la política de privacidad *
             </label>
           </ChecksContainer>
           <div className="button-group">
             <SubmitButton 
               onClick={handleSubmit}
-              disabled={isSubmitting}
+              disabled={isSubmitting || !isCurrentStepValid()}
+              style={{
+                opacity: (!isCurrentStepValid() || isSubmitting) ? 0.5 : 1,
+                cursor: (!isCurrentStepValid() || isSubmitting) ? 'not-allowed' : 'pointer'
+              }}
             >
               {isSubmitting ? (
                 <>
@@ -296,7 +367,18 @@ function HowCanWeHelpYou() {
         </FormContainer>
       )}
 
-      {currentStep < 4 && <NextButton onClick={handleNext}>Siguiente</NextButton>}
+      {currentStep < 4 && (
+        <NextButton 
+          onClick={handleNext}
+          disabled={!isCurrentStepValid()}
+          style={{
+            opacity: !isCurrentStepValid() ? 0.5 : 1,
+            cursor: !isCurrentStepValid() ? 'not-allowed' : 'pointer'
+          }}
+        >
+          Siguiente
+        </NextButton>
+      )}
       
       {/* Modal Component */}
       <Modal 
