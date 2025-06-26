@@ -67,7 +67,7 @@ function Contact() {
     email: "",
     telefono: "",
     mensaje: "",
-    legal: true // Establecido como true por defecto
+    legal: false // Cambiado a false para que sea obligatorio marcarlo
   });
   
   // Estado para controlar si el formulario está siendo enviado
@@ -77,6 +77,17 @@ function Contact() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalStatus, setModalStatus] = useState<"success" | "error">("success");
   const [modalMessage, setModalMessage] = useState("");
+
+  // Función para validar si el formulario está completo
+  const isFormValid = (): boolean => {
+    return (
+      formData.nombre.trim() !== "" &&
+      formData.email.trim() !== "" &&
+      formData.telefono.trim() !== "" &&
+      formData.mensaje.trim() !== "" &&
+      formData.legal === true
+    );
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -89,10 +100,10 @@ function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validar que la casilla legal esté marcada antes de enviar
-    if (!formData.legal) {
+    // Validar que todos los campos estén completos
+    if (!isFormValid()) {
       setModalStatus("error");
-      setModalMessage("Debe aceptar el aviso legal y la política de privacidad para continuar.");
+      setModalMessage("Por favor completa todos los campos obligatorios y acepta el aviso legal.");
       setModalOpen(true);
       return;
     }
@@ -117,7 +128,7 @@ function Contact() {
         setModalMessage(data.message || "Correo enviado correctamente");
         setModalOpen(true);
         // Resetear el formulario
-        setFormData({ nombre: "", email: "", telefono: "", mensaje: "", legal: true });
+        setFormData({ nombre: "", email: "", telefono: "", mensaje: "", legal: false });
       } else {
         // Mostrar modal de error
         setModalStatus("error");
@@ -199,13 +210,18 @@ function Contact() {
                 name="legal" 
                 checked={formData.legal} 
                 onChange={handleChange}
+                required
               /> He leído y acepto el aviso legal y la política de privacidad
             </label>
           </ChecksContainer>
           <button 
             type="submit" 
             data-gtm-label="formulario_contacto_enviar"
-            disabled={isSubmitting || !formData.legal}
+            disabled={isSubmitting || !isFormValid()}
+            style={{
+              opacity: (!isFormValid() || isSubmitting) ? 0.5 : 1,
+              cursor: (!isFormValid() || isSubmitting) ? 'not-allowed' : 'pointer'
+            }}
           >
             {isSubmitting ? (
               <>
