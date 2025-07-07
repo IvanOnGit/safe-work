@@ -98,6 +98,11 @@ export const VideoContainer = styled.div`
         margin-top: 3rem;
         border: none;
         cursor: pointer;
+
+        &:hover {
+            background-color: #c52138;
+            transition: all 0.3s ease-in-out;
+        }
     }
 
     p {
