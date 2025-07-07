@@ -25,11 +25,12 @@ export const TextContainer = styled.div`
     margin-left: 6rem;
     margin-bottom: 7rem;
     h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 100;
 
         @media (max-width: 768px) {
             text-align: center;
+            font-size: 1.4rem;
         }
     }
     p {
@@ -88,12 +89,24 @@ export const VideoContainer = styled.div`
         }
     }
 
+    button {
+        padding: 1rem;
+        background-color: #88123c;
+        color: white;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        margin-top: 3rem;
+        border: none;
+        cursor: pointer;
+    }
+
     p {
         font-family: 'Inter', sans-serif;
         color: white;
         font-size: 1rem;
         text-align: center;
         width: 30rem;
+        display: none;
 
         @media (max-width: 768px) {
             width: 90%;
@@ -104,7 +117,8 @@ export const VideoContainer = styled.div`
     @media (max-width: 768px) {
         width: 90%;
         margin-right: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 0rem;
+        margin-top: 2rem;
     }
 `;
 

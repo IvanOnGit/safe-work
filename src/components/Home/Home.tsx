@@ -32,7 +32,9 @@ function Home() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
-        <p>Miguel Pérez Urzay | Director | Psicólogo Forense y Sanitario | Docente Universitario | Especialista en Peritaje de Acoso Laboral</p>
+          <p>Miguel Pérez Urzay | Director | Psicólogo Forense y Sanitario | Docente Universitario | Especialista en Peritaje de Acoso Laboral</p>
+          <button onClick={() => window.open('https://calendly.com/safeworkconsultagratuita/20min')}>
+            Hablar con un experto</button>
         </VideoContainer>
         <HowCanWeHelpYou />
       </Container>
