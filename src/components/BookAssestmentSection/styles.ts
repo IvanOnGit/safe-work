@@ -77,6 +77,7 @@ export const TextContainer = styled.div`
         border-radius: 1rem;
         cursor: pointer;
         font-size: 1rem;
+        font-weight: bold;
 
         @media (max-width: 768px) {
             margin-bottom: 1rem;

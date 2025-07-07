@@ -98,6 +98,7 @@ export const VideoContainer = styled.div`
         margin-top: 3rem;
         border: none;
         cursor: pointer;
+        font-weight: bold;
 
         &:hover {
             background-color: #c52138;

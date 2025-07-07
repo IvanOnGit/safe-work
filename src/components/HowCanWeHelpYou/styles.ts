@@ -91,6 +91,8 @@ export const ButtonsContainer = styled.div`
     border: 1px solid #D9D9D9;
     cursor: pointer;
     font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
   }
 `;
 
@@ -101,6 +103,8 @@ export const NextButton = styled.button`
   border: none;
   cursor: pointer;
   font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
 
     &:hover {
         background-color: #c52138;
@@ -145,6 +149,8 @@ export const FormContainer = styled.div`
 
     button {
       padding: 1rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: bold;
     }
 
     button:hover {
@@ -208,6 +214,8 @@ export const SubmitButton = styled.button<{ secondary?: boolean }>`
   cursor: pointer;
   width: 15rem;
   text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
   
   /* Estilos para el botón con loader */
   display: flex;
@@ -295,7 +303,7 @@ export const ModalButton = styled.button`
   padding: 0.8rem 1.5rem;
   font-family: 'Inter', sans-serif;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: bold;
   align-self: center;
 
   &:hover {

@@ -58,6 +58,7 @@ export const TextContainer = styled.div`
     border-radius: 0.5rem;
     padding: 1rem;
     font-family: 'Inter', sans-serif;
+    font-weight: bold;
     cursor: pointer;
     width: 12rem;
 
@@ -132,6 +133,7 @@ export const FormContainer = styled.div`
       font-family: 'Inter', sans-serif;
       cursor: pointer;
       font-size: 1rem;
+      font-weight: bold;
       display: flex;
       align-items: center;
       justify-content: center;
