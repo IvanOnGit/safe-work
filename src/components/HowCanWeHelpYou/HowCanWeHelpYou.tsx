@@ -44,7 +44,7 @@ const Modal = ({ isOpen, onClose, status, message }: ModalProps) => {
 };
 
 function HowCanWeHelpYou() {
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(0); // Cambiar a 0 para empezar en el paso inicial
   const [answers, setAnswers] = useState<(string | string[])[]>([]);
   const [formData, setFormData] = useState({ firstName: '', lastName: '', email: '', phone: '', newsletter: true, legal: true });
   const [isVisible, setIsVisible] = useState(false);
@@ -90,6 +90,11 @@ function HowCanWeHelpYou() {
 
   // Función para validar si el paso actual está completo
   const isCurrentStepValid = (): boolean => {
+    if (currentStep === 0) {
+      // Paso 0: Siempre válido, solo necesita hacer clic en "Empezar"
+      return true;
+    }
+    
     const stepIndex = currentStep - 1;
     
     if (currentStep === 1) {
@@ -112,7 +117,10 @@ function HowCanWeHelpYou() {
   };
 
   const handleNext = () => {
-    if (isCurrentStepValid() && currentStep < 4) {
+    if (currentStep === 0) {
+      // Desde el paso 0, ir al paso 1
+      setCurrentStep(1);
+    } else if (isCurrentStepValid() && currentStep < 4) {
       setCurrentStep(currentStep + 1);
     }
   };
@@ -197,7 +205,7 @@ function HowCanWeHelpYou() {
         setModalOpen(true);
 
         setFormData({ firstName: '', lastName: '', email: '', phone: '', newsletter: true, legal: true });
-        setCurrentStep(1);
+        setCurrentStep(0); // Volver al paso 0 después de enviar
         setAnswers([]);
 
         // ✅ Redirigir a Calendly después de 3 segundos
@@ -220,7 +228,18 @@ function HowCanWeHelpYou() {
 
   return (
     <Container ref={containerRef} className={isVisible ? 'visible' : ''}>
-      <Stepper currentStep={currentStep} />
+      {/* Solo mostrar el Stepper si no estamos en el paso 0 */}
+      {currentStep > 0 && <Stepper currentStep={currentStep} />}
+
+      {/* Paso 0: Pantalla de inicio */}
+      {currentStep === 0 && (
+        <TextContainer>
+          <h1>Completa el asesoramiento</h1>
+          <NextButton onClick={handleNext}>
+            Empezar
+          </NextButton>
+        </TextContainer>
+      )}
 
       {currentStep === 1 && (
         <TextContainer>
@@ -367,7 +386,8 @@ function HowCanWeHelpYou() {
         </FormContainer>
       )}
 
-      {currentStep < 4 && (
+      {/* Botón "Siguiente" solo se muestra en los pasos 1, 2 y 3 */}
+      {currentStep >= 1 && currentStep < 4 && (
         <NextButton 
           onClick={handleNext}
           disabled={!isCurrentStepValid()}
