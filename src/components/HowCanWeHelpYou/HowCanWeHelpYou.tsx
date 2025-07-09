@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Stepper from '../Stepper/Stepper';
 import { ButtonsContainer, Container, FormContainer, Input, NextButton, SubmitButton, TextContainer, ModalOverlay, ModalContent, ModalTitle, ModalMessage, ModalButton, ChecksContainer } from './styles';
 
@@ -352,7 +353,7 @@ function HowCanWeHelpYou() {
           </div>
           <ChecksContainer>
             <label>
-              <input type="checkbox" name="newsletter" checked={formData.newsletter} onChange={handleInputChange} /> Recibir información sobre como podemos ayudarte
+              <input type="checkbox" name="newsletter" checked={formData.newsletter} onChange={handleInputChange} /> Quiero recibir orientación sobre cómo afrontar mi caso y los recursos disponibles.
             </label>
             <label style={{ color: !formData.legal ? '#ff6b6b' : undefined }}>
               <input 
@@ -361,8 +362,34 @@ function HowCanWeHelpYou() {
                 checked={formData.legal} 
                 onChange={handleInputChange}
                 required
-              /> He leido y acepto el aviso legal y la política de privacidad *
+              /> 
+              He leído y acepto el{' '}
+              <Link 
+                to="/legal" 
+                target="_blank" 
+                style={{ 
+                  color: '#88123c', 
+                  textDecoration: 'underline',
+                  fontWeight: 'bold'
+                }}
+              >
+                aviso legal
+              </Link>
+              {' '}y la{' '}
+              <Link 
+                to="/privacidad" 
+                target="_blank" 
+                style={{ 
+                  color: '#88123c', 
+                  textDecoration: 'underline',
+                  fontWeight: 'bold'
+                }}
+              >
+                política de privacidad
+              </Link>
+              {' '}*
             </label>
+            <p>🔒 Tus datos serán tratados con total confidencialidad.</p>
           </ChecksContainer>
           <div className="button-group">
             <SubmitButton 

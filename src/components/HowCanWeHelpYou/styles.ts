@@ -8,7 +8,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 27rem;
+  height: 28rem;
   width: 40rem;
   position: absolute;
   top: 55%;
@@ -348,6 +348,12 @@ export const ChecksContainer = styled.div`
       padding: 0;
       cursor: pointer;
     }
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.5);
   }
 
   @media (max-width: 768px) {
