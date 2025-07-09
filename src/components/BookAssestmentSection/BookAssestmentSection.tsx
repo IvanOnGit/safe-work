@@ -39,22 +39,23 @@ function BookAssestmentSection() {
   return (
     <Container ref={containerRef} className={isVisible ? 'visible' : ''}>
       <TextContainer>
-        <h2>Haz frente al acoso con apoyo legal y psicológico especializado</h2>
-        <h1>
-        Nadie debería sufrir acoso laboral<span className="mobile-hide"><br /></span> 
-        ni tratos denigrantes en el trabajo.<span className="mobile-hide"><br /></span>
-        </h1>
+        <h2>El primer paso para terminar con el acoso es hablar con expertos que saben lo que estás viviendo.</h2>
         <p>
-          Nuestro equipo de psicólogos y abogados expertos 
-          en mobbing te acompaña en cada paso 
-          para ayudarte a salir de esta situación, 
-          recuperar tu estabilidad emocional 
-          y defender tus derechos con confianza.
+          Sabemos lo difícil que es poner en palabras lo que estás viviendo.
+          Por eso te ofrecemos una primera consulta gratuita y sin compromiso con un experto en acoso laboral.
         </p>
+        <p>En esta sesión de 30 minutos:</p>
+        <p>
+        ✓ Te escuchamos con atención y empatía <br />
+        ✓ Valoramos si hay indicios de acoso laboral <br />
+        ✓ Te explicamos qué opciones tienes <br />
+        ✓ Resolvemos todas tus dudas sobre cómo podemos ayudarte <br />
+        </p>
+        <p>Es confidencial y totalmente orientada a que puedas empezar a recuperar el control de tu vida laboral y emocional</p>
         <button 
           onClick={() => window.open("https://calendly.com/safeworkconsultagratuita/20min")}
         >
-          Agenda una asesoría
+          Quiero mi consulta gratuita
         </button>
       </TextContainer>
       <ImageContainer>

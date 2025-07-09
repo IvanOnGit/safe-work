@@ -48,15 +48,8 @@ export const TextContainer = styled.div`
     font-family: 'Inter', sans-serif;
     gap: 1.5rem;
 
-    h1 {
-        font-size: 2rem;
-        margin: 0;
-        padding: 0;
-        display: none;
-    }
-
     h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: bold;
         margin: 0;
         padding: 0;
@@ -65,7 +58,7 @@ export const TextContainer = styled.div`
     p {
         margin: 0;
         padding: 0;
-        font-size: 1.1rem;
+        font-size: 1rem;
         text-align: justify;
     }
 
@@ -124,7 +117,7 @@ export const ImageContainer = styled.div`
 
     img {
         width: 35rem;
-        height: 25rem;
+        height: 30rem;
         border-top-left-radius: 1rem;
         border-bottom-left-radius: 1rem;
     }
