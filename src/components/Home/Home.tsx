@@ -31,7 +31,7 @@ function Home() {
         />
           <p>✔ Consulta inicial sin compromiso <br />✔ Apoyo legal y psicológico <br />✔ Informe válido judicialmente</p>
           <button onClick={() => window.open('https://calendly.com/safeworkconsultagratuita/20min')}>
-            Hablar con un experto</button>
+            Quiero hablar con un experto</button>
         </VideoContainer>
         <HowCanWeHelpYou />
       </Container>

@@ -110,14 +110,18 @@ export const VideoContainer = styled.div`
         font-family: 'Inter', sans-serif;
         color: white;
         font-size: 0.8rem;
-        text-align: center;
+        text-align: left;
         width: 25rem;
         margin: 0;
+        line-height: 1.8;
+        white-space: pre-line;
+        margin-left: 14rem;
 
         @media (max-width: 768px) {
             width: 90%;
             font-size: 0.9rem;
             margin-top: 1rem;
+            margin-left: 6.2rem;
         }
     }
 
