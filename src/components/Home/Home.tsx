@@ -29,8 +29,7 @@ function Home() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
-          <p>No estás solo/a. Te acompaña un equipo psicolegal especializado únicamente en acoso laboral.</p>
-          <p>✔ Consulta inicial sin compromiso ✔ Apoyo legal y psicológico ✔ Informe válido judicialmente</p>
+          <p>✔ Consulta inicial sin compromiso <br />✔ Apoyo legal y psicológico <br />✔ Informe válido judicialmente</p>
           <button onClick={() => window.open('https://calendly.com/safeworkconsultagratuita/20min')}>
             Hablar con un experto</button>
         </VideoContainer>
