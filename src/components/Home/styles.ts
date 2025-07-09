@@ -117,6 +117,7 @@ export const VideoContainer = styled.div`
         @media (max-width: 768px) {
             width: 90%;
             font-size: 0.9rem;
+            margin-top: 1rem;
         }
     }
 
