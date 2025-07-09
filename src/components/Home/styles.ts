@@ -67,6 +67,7 @@ export const TextContainer = styled.div`
 export const VideoContainer = styled.div`
     margin-right: 6rem;
     margin-bottom: 7rem;
+    gap: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,7 +96,6 @@ export const VideoContainer = styled.div`
         color: white;
         font-family: 'Inter', sans-serif;
         font-size: 1rem;
-        margin-top: 3rem;
         border: none;
         cursor: pointer;
         font-weight: bold;
@@ -109,10 +109,10 @@ export const VideoContainer = styled.div`
     p {
         font-family: 'Inter', sans-serif;
         color: white;
-        font-size: 1rem;
+        font-size: 0.8rem;
         text-align: center;
-        width: 30rem;
-        display: none;
+        width: 25rem;
+        margin: 0;
 
         @media (max-width: 768px) {
             width: 90%;

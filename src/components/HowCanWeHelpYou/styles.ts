@@ -8,7 +8,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 25rem;
+  height: 27rem;
   width: 40rem;
   position: absolute;
   top: 55%;
@@ -38,7 +38,7 @@ export const Container = styled.div`
     left: initial;
     opacity: 1;
     margin-left: 18rem;
-    margin-top: 23rem;
+    margin-top: 20rem;
     transform: translate(-50%, -50%) translateY(0);
     
     &.step-0 {
@@ -61,6 +61,7 @@ export const TextContainer = styled.div`
       color: #001C3C;
       margin: 0;
       padding: 0;
+      font-size: 1.5rem;
   }
 
   h2 {
@@ -73,6 +74,11 @@ export const TextContainer = styled.div`
   @media (max-width: 768px) {
       h2 {
         display: none;
+      }
+
+      h1 {
+        width: 80%;
+        font-size: 1rem;
       }
   }
 `;
@@ -129,12 +135,14 @@ export const FormContainer = styled.div`
   h1 {
     margin: 0;
     padding: 0;
+    font-size: 1.5rem;
   }
 
   h2 {
     margin: 0;
     padding: 0;
     font-weight: bold;
+    font-size: 1rem;
   }
 
   .input-group {
@@ -169,6 +177,14 @@ export const FormContainer = styled.div`
   }
 
   @media (max-width: 768px) {
+
+    h1 {
+      font-size: 1.2rem;
+    }
+
+    h2 {
+      display: none;
+    }
     .input-group {
       flex-direction: column;
       width: 100%;

@@ -234,7 +234,7 @@ function HowCanWeHelpYou() {
       {/* Paso 0: Pantalla de inicio */}
       {currentStep === 0 && (
         <TextContainer>
-          <h1>Completa el asesoramiento</h1>
+          <h1>Responde estas 3 preguntas y recibe una guía jurídica para afrontar el acoso laboral.</h1>
           <NextButton onClick={handleNext}>
             Empezar
           </NextButton>
@@ -243,8 +243,8 @@ function HowCanWeHelpYou() {
 
       {currentStep === 1 && (
         <TextContainer>
-          <h1>¿Desde hace cuánto estás <br />sufriendo acoso laboral?</h1>
-          <h2>Elige la opción que más se ajuste a ti</h2>
+          <h1>Empecemos por lo esencial <br />¿desde cuándo estás sufriendo acoso laboral?</h1>
+          <h2>El tiempo deja huella. Saber cuánto llevas así <br />nos ayuda a entender mejor tu situación.</h2>
           <ButtonsContainer>
             {['Menos de 3 meses', 'Entre 3 y 6 meses', 'Entre 6 meses y 1 año', 'Más de 1 año'].map((option, index) => (
               <button
@@ -265,7 +265,7 @@ function HowCanWeHelpYou() {
       {currentStep === 2 && (
         <TextContainer>
           <h1>¿Qué conductas estás sufriendo?</h1>
-          <h2>Elige las opciones que correspondan</h2>
+          <h2>No estás exagerando. Identificar estas conductas es clave para ponerles límite.</h2>
           <ButtonsContainer>
             {[
               'Me desprestigian personal y/o profesionalmente',
@@ -290,8 +290,8 @@ function HowCanWeHelpYou() {
 
       {currentStep === 3 && (
         <TextContainer>
-          <h1>¿Tienes alguno de estos síntomas?</h1>
-          <h2>Elige las opciones que correspondan</h2>
+          <h1>¿Estás notando alguno de estos <br />síntomas en tu día a día?</h1>
+          <h2>Identificarlos nos permite ofrecerte el apoyo adecuado.</h2>
           <ButtonsContainer>
             {['Ansiedad', 'Insomnio', 'Apatía y/o falta de energía', 'Somatizaciones'].map((option, index) => (
               <button
@@ -311,8 +311,8 @@ function HowCanWeHelpYou() {
 
       {currentStep === 4 && (
         <FormContainer>
-          <h1>¿Cómo podemos contactarte?</h1>
-          <h2>Ingresa tu información debajo</h2>
+          <h1>¿Dónde te enviamos la guía jurídica gratuita <br />para ayudarte a actuar?</h1>
+          <h2>Gracias por compartir lo que estás viviendo. Este último paso <br />nos permite enviarte los recursos que pueden ayudarte.</h2>
           <div className="input-group">
             <Input 
               type="text" 
