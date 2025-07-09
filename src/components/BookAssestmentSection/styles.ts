@@ -38,7 +38,7 @@ export const Container = styled.section`
         margin-bottom: 2rem;
         background-color: #001C3C;
         margin-top: 2rem;
-        padding-bottom: 3.5rem;
+        padding-bottom: 4rem;
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {   
