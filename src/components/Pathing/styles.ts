@@ -268,11 +268,54 @@ export const BranchTitle = styled.h3`
   font-weight: bold;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  /* Círculo con numeración solo en escritorio */
+  &::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #001C3C;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  /* Numeración específica para cada branch */
+  ${MainBranch}:nth-child(1) & {
+    &::before {
+      content: '1';
+    }
+  }
+  
+  ${MainBranch}:nth-child(2) & {
+    &::before {
+      content: '2';
+    }
+  }
+  
+  ${MainBranch}:nth-child(3) & {
+    &::before {
+      content: '3';
+    }
+  }
 
   @media (max-width: 768px) {
     width: 80%;
     text-align: left;
     font-size: 0.95rem;
+    display: block;
   }
 `;
 
