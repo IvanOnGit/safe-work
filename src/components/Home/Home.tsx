@@ -17,10 +17,7 @@ function Home() {
         <TextContainer id="home">
           <h1>Demuestra el acoso laboral <br /> y recupera el control de tu vida.</h1>
           <p>
-          Sabemos lo difícil que es vivir con ansiedad, sentirte invisible y tener miedo <br /> a no poder demostrar  lo que estás sufriendo, pero no estás solo/a.
-          </p>
-          <p>
-          Nuestro equipo te acompaña dándote asistencia legal, psicológica y pericial, <br /> para que puedas defender tus derechos, hacer justicia y recuperar tu bienestar.
+          Recupera la calma, el sueño y la vida que el acoso te está robando.
           </p>
         </TextContainer>
         <VideoContainer>

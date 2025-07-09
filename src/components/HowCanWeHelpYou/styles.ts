@@ -13,7 +13,6 @@ export const Container = styled.div`
   position: absolute;
   top: 55%;
   left: 50%;
-  /* Modificamos el transform para combinar el posicionamiento con la animación */
   transform: translate(-50%, -50%) translateY(50px);
   margin-top: 30rem;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -22,27 +21,29 @@ export const Container = styled.div`
   color: #001C3C;
   text-align: center;
   
-  /* Estilos de animación */
   opacity: 0;
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   
   &.visible {
     opacity: 1;
-    transform: translate(-50%, -50%) translateY(0); /* Deslizar hacia arriba cuando sea visible */
+    transform: translate(-50%, -50%) translateY(0);
   }
 
   @media (max-width: 768px) {
     width: 18rem;
-    height: auto;
+    height: auto; 
     padding: 1rem;
     position: relative;
     top: initial;
     left: initial;
-    /* Siempre visible en móvil */
     opacity: 1;
     margin-left: 18rem;
     margin-top: 23rem;
-    transform: translate(-50%, -50%) translateY(0); /* Sin animación en móvil */
+    transform: translate(-50%, -50%) translateY(0);
+    
+    &.step-0 {
+      min-height: 30rem;
+    }
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {   

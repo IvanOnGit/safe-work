@@ -227,7 +227,7 @@ function HowCanWeHelpYou() {
   };
 
   return (
-    <Container ref={containerRef} className={isVisible ? 'visible' : ''}>
+    <Container ref={containerRef} className={`${isVisible ? 'visible' : ''} ${currentStep === 0 ? 'step-0' : ''}`}>
       {/* Solo mostrar el Stepper si no estamos en el paso 0 */}
       {currentStep > 0 && <Stepper currentStep={currentStep} />}
 
