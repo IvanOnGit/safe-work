@@ -30,10 +30,15 @@ export const Container = styled.section`
         height: auto;
         opacity: 1;
         transform: none;
-        padding: 0;
+        padding: 0 1rem;
         gap: 2rem;
-        width: 90%;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box; /* Asegura que el padding se incluya en el width */
         margin-bottom: 2rem;
+        background-color: #001C3C;
+        margin-top: 2rem;
+        padding-bottom: 3.5rem;
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {   
@@ -86,6 +91,7 @@ export const TextContainer = styled.div`
 
     @media (max-width: 768px) {
         margin-top: 5rem;
+        color: white;
 
         .mobile-hide {
             display: none;
