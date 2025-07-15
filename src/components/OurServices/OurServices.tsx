@@ -1,6 +1,10 @@
 import { FileText, DollarSign, User } from 'lucide-react';
 import { Container, ServiceCard, IconWrapper, Title, List, TextContainer, MobileContainer } from './styles';
 
+// DEPRECATED COMPONENT
+// DEPRECATED COMPONENT
+// DEPRECATED COMPONENT
+
 function OurServices() {
     return (
         <>
