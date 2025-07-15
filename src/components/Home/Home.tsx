@@ -4,7 +4,7 @@ import FloatingButton from '../FloatingButton/FloatingButton';
 import Footer from '../Footer/Footer';
 import HowCanWeHelpYou from '../HowCanWeHelpYou/HowCanWeHelpYou';
 import Navbar from '../Navbar/Navbar';
-import OurServices from '../OurServices/OurServices';
+import Services from '../Services/Services';
 import Pathing from '../Pathing/Pathing';
 import Recomendations from '../Recomendations/Recomendations';
 import { Container, TextContainer, VideoContainer } from './styles';
@@ -37,7 +37,7 @@ function Home() {
       </Container>
       <Pathing />
       <BookAssestmentSection />
-      <OurServices />
+      <Services />
       <Recomendations />
       <Contact />
       <Footer />
