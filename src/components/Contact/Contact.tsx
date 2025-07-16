@@ -9,7 +9,8 @@ import {
   ModalMessage, 
   ModalButton,
   ChecksContainer, 
-  TicksContainer
+  TicksContainer,
+  StyledParagraph
 } from './styles';
 import { Check } from "lucide-react";
 
@@ -175,6 +176,7 @@ function Contact() {
         <button onClick={() => window.open('https://calendly.com/safeworkconsultagratuita/20min')}>
           Quiero hablar con un experto
         </button>
+        <StyledParagraph><p>🔐 Tus datos están protegidos. Solo los usaremos para ponernos en contacto contigo.</p></StyledParagraph>
       </TextContainer>
 
       <FormContainer>

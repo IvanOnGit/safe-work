@@ -297,3 +297,12 @@ export const TicksContainer = styled.div`
     gap: 0.5rem;
   }
 `;
+
+export const StyledParagraph = styled.div`
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+`;
