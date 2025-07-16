@@ -77,6 +77,13 @@ export const TextContainer = styled.div`
     }
   }
 
+  button:last-of-type {
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
   @media (max-width: 768px) {
     width: 100%;
   }

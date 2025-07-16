@@ -176,6 +176,9 @@ function Contact() {
         <button onClick={() => window.open('https://calendly.com/safeworkconsultagratuita/20min')}>
           Quiero hablar con un experto
         </button>
+        <button onClick={() => window.open(`https://wa.me/34622377041?text=${encodeURIComponent('Hola!, quiero consultar algunas dudas…')}`, '_blank')}>
+        Contactar por WhatsApp
+        </button>
         <StyledParagraph><p>🔐 Tus datos están protegidos. Solo los usaremos para ponernos en contacto contigo.</p></StyledParagraph>
       </TextContainer>
 
