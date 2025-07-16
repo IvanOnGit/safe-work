@@ -64,7 +64,7 @@ export const TextContainer = styled.div`
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     cursor: pointer;
-    width: 12rem;
+    width: 14rem;
 
     @media (max-width: 768px) {
       width: 100%;
@@ -281,5 +281,19 @@ export const ChecksContainer = styled.div`
       font-size: 0.8rem;
       text-align: justify;
     }
+  }
+`;
+
+export const TicksContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 `;

@@ -8,8 +8,10 @@ import {
   ModalTitle, 
   ModalMessage, 
   ModalButton,
-  ChecksContainer 
+  ChecksContainer, 
+  TicksContainer
 } from './styles';
+import { Check } from "lucide-react";
 
 // Interfaz para el modal
 interface ModalProps {
@@ -154,19 +156,24 @@ function Contact() {
   return (
     <Container id="contact">
       <TextContainer>
-        <h1>Cuéntanos tu caso y te ayudaremos a saber cómo actuar</h1>
+        <h1>Da el primer paso para recuperar tu tranquilidad</h1>
         <p>
-          Rellena este formulario de forma sencilla y confidencial.
+          Te escuchamos. Sin compromiso, con total confidencialidad.
         </p>
         <p>
-          Nuestro equipo valorará tu situación y te responderá con orientación profesional y sin compromiso.
+          Rellena el formulario y nuestro equipo especializado valorará tu situación.
         </p>
         <p>
-          Estamos aquí para ayudarte a dar el primer paso, con respeto, escucha y total discreción.
+          En menos de 24 horas nos pondremos en contacto contigo para empezar a ayudarte.
         </p>
+        <TicksContainer>
+          <p><Check />Primera consulta gratuita</p>
+          <p><Check />Atención especializada en acoso laboral</p>
+          <p><Check />Total confidencialidad</p>
+        </TicksContainer>
 
         <button onClick={() => window.open('https://calendly.com/safeworkconsultagratuita/20min')}>
-          Cuéntanos tu situación
+          Quiero hablar con un experto
         </button>
       </TextContainer>
 
