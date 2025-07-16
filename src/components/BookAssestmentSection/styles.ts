@@ -58,6 +58,10 @@ export const TextContainer = styled.div`
         font-weight: bold;
         margin: 0;
         padding: 0;
+
+        @media (max-width: 768px) {
+            text-align: center;
+        }
     }
 
     p {
