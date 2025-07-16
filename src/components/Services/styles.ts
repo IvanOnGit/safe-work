@@ -15,6 +15,7 @@ export const Container = styled.section`
 
         @media (max-width: 768px) {
             text-align: center;
+            font-size: 1.5rem;
         }
     }
 
