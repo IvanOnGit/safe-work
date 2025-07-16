@@ -55,11 +55,16 @@ export const Card = styled.div`
     text-align: left;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     gap: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 
     h2 {
         font-size: 1rem;
         margin: 0;
         padding: 0;
+        transition: color 0.3s ease;
     }
 
     p {
@@ -67,10 +72,15 @@ export const Card = styled.div`
         margin: 0;
         padding: 0;
         width: 17rem;
+        transition: color 0.3s ease;
 
         @media (max-width: 768px) {
             font-size: 0.9rem;
         }
+    }
+
+    svg {
+        transition: color 0.3s ease;
     }
 
     &.law {
@@ -93,6 +103,24 @@ export const Card = styled.div`
                 height: 2rem;
                 width: 1.5rem;
                 flex-shrink: 0;
+            }
+        }
+
+        @media (min-width: 769px) {
+            &:hover {
+                background-color: #4a2140;
+                
+                h2 {
+                    color: white !important;
+                }
+
+                p {
+                    color: white !important;
+                }
+
+                svg {
+                    color: white !important;
+                }
             }
         }
     }
@@ -119,6 +147,24 @@ export const Card = styled.div`
                 flex-shrink: 0;
             }
         }
+
+        @media (min-width: 769px) {
+            &:hover {
+                background-color: #88213c;
+                
+                h2 {
+                    color: white !important;
+                }
+
+                p {
+                    color: white !important;
+                }
+
+                svg {
+                    color: white !important;
+                }
+            }
+        }
     }
 
     &.brain {
@@ -141,6 +187,24 @@ export const Card = styled.div`
                 height: 2rem;
                 width: 1.5rem;
                 flex-shrink: 0;
+            }
+        }
+
+        @media (min-width: 769px) {
+            &:hover {
+                background-color: #c52138;
+                
+                h2 {
+                    color: white !important;
+                }
+
+                p {
+                    color: white !important;
+                }
+
+                svg {
+                    color: white !important;
+                }
             }
         }
     }
