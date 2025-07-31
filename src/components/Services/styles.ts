@@ -59,6 +59,14 @@ export const Card = styled.div`
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
+    
+    /* Desactivar selección de texto y comportamientos táctiles */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
 
     h2 {
         font-size: 1rem;
