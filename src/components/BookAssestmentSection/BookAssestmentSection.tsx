@@ -45,7 +45,7 @@ function BookAssestmentSection() {
           Por eso te ofrecemos una primera consulta gratuita y sin compromiso con un experto en acoso laboral.
         </p>
         <p>En esta sesión de 30 minutos:</p>
-        <p>
+        <p className='list'>
         ✓ Te escuchamos con atención y empatía <br />
         ✓ Valoramos si hay indicios de acoso laboral <br />
         ✓ Te explicamos qué opciones tienes <br />

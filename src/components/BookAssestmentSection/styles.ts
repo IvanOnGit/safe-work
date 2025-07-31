@@ -103,6 +103,10 @@ export const TextContainer = styled.div`
 
         p {
             text-align: justify;
+
+            &.list {
+                text-align: initial;
+            }
         }
 
         h1 {

@@ -99,10 +99,13 @@ export const Card = styled.div`
         p {
             display: flex;
             gap: 1rem;
+            align-items: flex-start;
+            
             svg {
                 height: 2rem;
                 width: 1.5rem;
                 flex-shrink: 0;
+                margin-top: 0.1rem;
             }
         }
 
@@ -141,10 +144,13 @@ export const Card = styled.div`
         p {
             display: flex;
             gap: 1rem;
+            align-items: flex-start;
+            
             svg {
                 height: 2rem;
                 width: 1.5rem;
                 flex-shrink: 0;
+                margin-top: 0.1rem;
             }
         }
 
@@ -183,10 +189,13 @@ export const Card = styled.div`
         p {
             display: flex;
             gap: 1rem;
+            align-items: flex-start;
+            
             svg {
                 height: 2rem;
                 width: 1.5rem;
                 flex-shrink: 0;
+                margin-top: 0.1rem;
             }
         }
 
@@ -219,5 +228,7 @@ export const ParagraphContainer = styled.div`
     p {
         height: 5rem;
         text-align: justify;
+        font-size: 0.9rem;
+        font-weight: 500;
     }
 `;
