@@ -109,8 +109,28 @@ export const Card = styled.div`
             }
         }
 
+        /* Hover para desktop */
         @media (min-width: 769px) {
             &:hover {
+                background-color: #4a2140;
+                
+                h2 {
+                    color: white !important;
+                }
+
+                p {
+                    color: white !important;
+                }
+
+                svg {
+                    color: white !important;
+                }
+            }
+        }
+
+        /* Active para mobile (mantener presionado) */
+        @media (max-width: 768px) {
+            &:active {
                 background-color: #4a2140;
                 
                 h2 {
@@ -154,8 +174,28 @@ export const Card = styled.div`
             }
         }
 
+        /* Hover para desktop */
         @media (min-width: 769px) {
             &:hover {
+                background-color: #88213c;
+                
+                h2 {
+                    color: white !important;
+                }
+
+                p {
+                    color: white !important;
+                }
+
+                svg {
+                    color: white !important;
+                }
+            }
+        }
+
+        /* Active para mobile (mantener presionado) */
+        @media (max-width: 768px) {
+            &:active {
                 background-color: #88213c;
                 
                 h2 {
@@ -199,8 +239,28 @@ export const Card = styled.div`
             }
         }
 
+        /* Hover para desktop */
         @media (min-width: 769px) {
             &:hover {
+                background-color: #c52138;
+                
+                h2 {
+                    color: white !important;
+                }
+
+                p {
+                    color: white !important;
+                }
+
+                svg {
+                    color: white !important;
+                }
+            }
+        }
+
+        /* Active para mobile (mantener presionado) */
+        @media (max-width: 768px) {
+            &:active {
                 background-color: #c52138;
                 
                 h2 {
