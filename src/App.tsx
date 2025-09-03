@@ -5,10 +5,7 @@ import Cookies from './components/Cookies/Cookies';
 import Legal from './components/Legal/Legal';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 
-console.log('🎨 App.tsx cargando...')
-
 function App() {
-  console.log('🎨 App component renderizando...')
   return (
     <Router>
       <Routes>
