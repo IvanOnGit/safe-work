@@ -53,7 +53,7 @@ function BookAssestmentSection() {
         </p>
         <p>Es confidencial y totalmente orientada a que puedas empezar a recuperar el control de tu vida laboral y emocional</p>
         <button 
-          onClick={() => window.open("https://calendly.com/safeworkconsultagratuita/20min")}
+          onClick={() => window.open("https://cal.com/miguelayudaacosolaboral/consultoria-gratuita-30-minutos")}
         >
           Quiero mi consulta gratuita
         </button>

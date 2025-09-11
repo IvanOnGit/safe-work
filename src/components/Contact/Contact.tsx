@@ -173,7 +173,7 @@ function Contact() {
           <p><Check />Total confidencialidad</p>
         </TicksContainer>
 
-        <button onClick={() => window.open('https://calendly.com/safeworkconsultagratuita/20min')}>
+        <button onClick={() => window.open('https://cal.com/miguelayudaacosolaboral/consultoria-gratuita-30-minutos')}>
           Quiero hablar con un experto
         </button>
         <button onClick={() => window.open(`https://wa.me/34622377041?text=${encodeURIComponent('Hola!, quiero consultar algunas dudas…')}`, '_blank')}>

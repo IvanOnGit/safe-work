@@ -39,7 +39,7 @@ function WhyUs() {
             <button
               onClick={() =>
                 window.open(
-                  "https://calendly.com/safeworkconsultagratuita/20min"
+                  "https://cal.com/miguelayudaacosolaboral/consultoria-gratuita-30-minutos"
                 )
               }
             >

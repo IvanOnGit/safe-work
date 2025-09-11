@@ -210,7 +210,7 @@ function HowCanWeHelpYou() {
         setAnswers([]);
 
         // ✅ Redirigir a Calendly después de 3 segundos
-        window.location.href = "https://calendly.com/safeworkconsultagratuita/20min";
+        window.location.href = "https://cal.com/miguelayudaacosolaboral/consultoria-gratuita-30-minutos";
         
       } else {
         setModalStatus("error");

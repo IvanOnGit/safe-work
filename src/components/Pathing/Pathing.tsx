@@ -53,7 +53,7 @@ function Pathing() {
           </BranchContent>
         </MainBranch>
 
-        <CTAButton onClick={() => window.open("https://calendly.com/safeworkconsultagratuita/20min")}>
+        <CTAButton onClick={() => window.open("https://cal.com/miguelayudaacosolaboral/consultoria-gratuita-30-minutos")}>
           ¿Comenzamos?
         </CTAButton>
       </TreeContainer>

@@ -30,7 +30,7 @@ function Home() {
           allowFullScreen
         />
           <p>✔ Consulta inicial sin compromiso <br />✔ Apoyo legal y psicológico <br />✔ Informe válido judicialmente</p>
-          <button onClick={() => window.open('https://calendly.com/safeworkconsultagratuita/20min')}>
+          <button onClick={() => window.open('https://cal.com/miguelayudaacosolaboral/consultoria-gratuita-30-minutos')}>
             Quiero hablar con un experto</button>
         </VideoContainer>
         <HowCanWeHelpYou />
