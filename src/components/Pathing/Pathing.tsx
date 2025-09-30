@@ -28,7 +28,7 @@ function Pathing() {
         <MainBranch>
           <BranchLine />
           <BranchContent >
-            <BranchTitle>Diagnóstico integral legal y psicológico: 175 € + IVA</BranchTitle>
+            <BranchTitle>Diagnóstico integral legal y psicológico:</BranchTitle>
             <BranchSubtitle></BranchSubtitle>
             <BranchDescription>
               Evaluación jurídica y psicológica especializada para orientar la viabilidad de tu caso en base a criterios técnicos, que incluye:
