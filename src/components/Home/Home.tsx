@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import BookAssestmentSection from '../BookAssestmentSection/BookAssestmentSection';
 import Contact from '../Contact/Contact';
 import FloatingButton from '../FloatingButton/FloatingButton';
@@ -10,31 +11,55 @@ import Recomendations from '../Recomendations/Recomendations';
 import { Container, TextContainer, VideoContainer } from './styles';
 
 function Home() {
+  const [showBooking, setShowBooking] = useState(false);
+
   return (
     <>
       <Navbar />
-      <Container>
-        <TextContainer id="home">
-          <h1>Demuestra el acoso laboral <br /> y recupera el control de tu vida.</h1>
-          <p>
-          Recupera la calma, el sueño y la vida que el acoso te está robando.
-          </p>
-        </TextContainer>
-        <VideoContainer>
-        <iframe
-          id="youtube-player"
-          src="https://www.youtube.com/embed/22zvzKSShPA?rel=0&autoplay=0&modestbranding=1&enablejsapi=1"
-          title="YouTube video"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-          <p>✔ Consulta inicial sin compromiso <br />✔ Apoyo legal y psicológico <br />✔ Informe válido judicialmente</p>
-          <button onClick={() => window.open('https://cal.com/miguelayudaacosolaboral/consultoria-gratuita-30-minutos')}>
-            Quiero hablar con un experto</button>
-        </VideoContainer>
-        <HowCanWeHelpYou />
-      </Container>
+
+      {/* CONTENIDO PRINCIPAL ARRIBA */}
+      {!showBooking ? (
+        <Container>
+          <TextContainer id="home">
+            <h1>
+              Demuestra el acoso laboral <br /> y recupera el control de tu vida.
+            </h1>
+            <p>
+              Recupera la calma, el sueño y la vida que el acoso te está robando.
+            </p>
+          </TextContainer>
+
+          <VideoContainer>
+            <iframe
+              id="youtube-player"
+              src="https://www.youtube.com/embed/22zvzKSShPA?rel=0&autoplay=0&modestbranding=1&enablejsapi=1"
+              title="YouTube video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+            <p>
+              ✔ Consulta inicial sin compromiso <br />
+              ✔ Apoyo legal y psicológico <br />
+              ✔ Informe válido judicialmente
+            </p>
+            <button onClick={() => setShowBooking(true)}>
+              Quiero hablar con un experto
+            </button>
+          </VideoContainer>
+
+          <HowCanWeHelpYou />
+        </Container>
+      ) : (
+        <Container style={{ minHeight: '80vh', padding: '4rem 1rem' }}>
+          <TextContainer style={{ maxWidth: '100%', textAlign: 'center' }}>
+            <iframe
+              src="https://cal.com/miguelayudaacosolaboral/consultoria-gratuita-30-minutos"
+              allow="camera; microphone; fullscreen"
+            ></iframe>
+          </TextContainer>
+        </Container>
+      )}
       <Pathing />
       <BookAssestmentSection />
       <Services />

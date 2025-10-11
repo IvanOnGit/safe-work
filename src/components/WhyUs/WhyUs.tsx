@@ -1,52 +1,60 @@
-import { Container, TextContainer, TitleContainer, WhyUsContainer } from './styles';
+import { useState } from 'react';
+import { Container, IframeContainer, TextContainer, TitleContainer, WhyUsContainer } from './styles';
 
 function WhyUs() {
+  const [showBooking, setShowBooking] = useState(false); // 👈 NUEVO estado
+
   return (
     <>
       <Container>
-        <TitleContainer>
-          <h1>Dar el paso no es fácil, pero puede cambiarlo todo</h1>
-        </TitleContainer>
-        <WhyUsContainer>
-          <img src="/images/WhyUs.jpg" alt="" />
-          <TextContainer>
-            <p>
-              Sabemos que no es sencillo. Dar el paso genera muchas dudas, y 
-              más cuando llevas tiempo en una situación que te desgasta tanto por dentro.
-            </p>
-            <p>
-              Es normal tener miedo a no poder demostrar lo que estás viviendo, a 
-              perder tu trabajo, a sentir que nadie te va a escuchar o que todo esto solo va a empeorar.
-            </p>
-            <p>
-              También es normal pensar: “¿y si estoy exagerando?”, 
-              “¿y si no sirve de nada?”, “¿y si solo pierdo tiempo y dinero?”.
-            </p>
-            <p>
-              El acoso laboral te hace dudar incluso de ti mismo/a. Te aísla, 
-              te agota y te empuja a callar por miedo a las consecuencias.
-            </p>
-            <p>
-              Por eso, detrás de esta página, hay un equipo humano que entiende lo que estás viviendo. 
-              Personas que han escuchado muchas historias como la tuya, y que están 
-              aquí para ayudarte sin juzgarte, sin presionarte y con el respeto que mereces.
-            </p>
-            <p>
-              Si te estás planteando pedir ayuda, este puede ser el comienzo de algo distinto. 
-              Un primer paso hacia recuperar tu bienestar, tu estabilidad 
-              y la seguridad de saber que estás haciendo lo correcto.
-            </p>
-            <button
-              onClick={() =>
-                window.open(
-                  "https://cal.com/miguelayudaacosolaboral/consultoria-gratuita-30-minutos"
-                )
-              }
-            >
-              Comienza tu cambio
-            </button>
-          </TextContainer>
-        </WhyUsContainer>
+        {!showBooking ? (
+          <>
+            <TitleContainer>
+              <h1>Dar el paso no es fácil, pero puede cambiarlo todo</h1>
+            </TitleContainer>
+            <WhyUsContainer>
+              <img src="/images/WhyUs.jpg" alt="" />
+              <TextContainer>
+                <p>
+                  Sabemos que no es sencillo. Dar el paso genera muchas dudas, y 
+                  más cuando llevas tiempo en una situación que te desgasta tanto por dentro.
+                </p>
+                <p>
+                  Es normal tener miedo a no poder demostrar lo que estás viviendo, a 
+                  perder tu trabajo, a sentir que nadie te va a escuchar o que todo esto solo va a empeorar.
+                </p>
+                <p>
+                  También es normal pensar: "¿y si estoy exagerando?", 
+                  "¿y si no sirve de nada?", "¿y si solo pierdo tiempo y dinero?".
+                </p>
+                <p>
+                  El acoso laboral te hace dudar incluso de ti mismo/a. Te aísla, 
+                  te agota y te empuja a callar por miedo a las consecuencias.
+                </p>
+                <p>
+                  Por eso, detrás de esta página, hay un equipo humano que entiende lo que estás viviendo. 
+                  Personas que han escuchado muchas historias como la tuya, y que están 
+                  aquí para ayudarte sin juzgarte, sin presionarte y con el respeto que mereces.
+                </p>
+                <p>
+                  Si te estás planteando pedir ayuda, este puede ser el comienzo de algo distinto. 
+                  Un primer paso hacia recuperar tu bienestar, tu estabilidad 
+                  y la seguridad de saber que estás haciendo lo correcto.
+                </p>
+                <button onClick={() => setShowBooking(true)}>
+                  Comienza tu cambio
+                </button>
+              </TextContainer>
+            </WhyUsContainer>
+          </>
+        ) : (
+          <IframeContainer style={{ width: '100%', display: 'flex', justifyContent: 'center', padding: '2rem 0' }}>
+            <iframe
+              src="https://cal.com/miguelayudaacosolaboral/consultoria-gratuita-30-minutos"
+              allow="camera; microphone; fullscreen"
+            ></iframe>
+          </IframeContainer>
+        )}
       </Container>
     </>
   );

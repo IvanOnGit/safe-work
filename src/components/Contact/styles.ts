@@ -29,6 +29,21 @@ export const TextContainer = styled.div`
   gap: 1.5rem;
   width: 40rem;
 
+  iframe {
+    width: 1100px;
+    margin-left: -15rem;
+    height: 600px;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 1rem;
+
+    @media (max-width: 768px) {
+      width: 350px;
+      height: 550px;
+      margin-left: -1rem;
+    }
+  }
+
   h1 {
     font-size: 2rem;
     margin: 0;

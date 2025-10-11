@@ -24,6 +24,22 @@ export const TextContainer = styled.div`
     font-family: 'Inter', sans-serif;
     margin-left: 6rem;
     margin-bottom: 7rem;
+
+    iframe {
+    width: 1100px;
+    height: 600px;
+    margin-left: 5.5rem;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 1rem;
+
+    @media (max-width: 768px) {
+      width: 350px;
+      height: 1150px;
+      margin-left: 0rem;
+    }
+  }
+
     h1 {
         font-size: 2.5rem;
         font-weight: 100;

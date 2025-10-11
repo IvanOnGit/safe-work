@@ -57,6 +57,20 @@ export const TextContainer = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 1rem;
+
+  iframe {
+    width: 1100px;
+    height: 580px;
+    border: none;
+    border-radius: 1rem;
+
+    @media (max-width: 768px) {
+      width: 350px;
+      height: 550px;
+      margin-left: 0rem;
+    }
+  }
+
   h1 {
       color: #001C3C;
       margin: 0;

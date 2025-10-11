@@ -53,6 +53,19 @@ export const TextContainer = styled.div`
     font-family: 'Inter', sans-serif;
     gap: 1.5rem;
 
+    iframe {
+    width: 1100px;
+    height: 600px;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 1rem;
+
+    @media (max-width: 768px) {
+      width: 350px;
+      height: 550px;
+    }
+  }
+
     h2 {
         font-size: 1.5rem;
         font-weight: bold;

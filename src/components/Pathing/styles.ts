@@ -71,6 +71,21 @@ export const Container = styled.div`
   }
 `;
 
+export const TextContainer = styled.div`
+  iframe {
+    width: 1100px;
+    height: 580px;
+    border: none;
+    border-radius: 1rem;
+
+    @media (max-width: 768px) {
+      width: 350px;
+      height: 550px;
+      margin-left: 0rem;
+    }
+  }
+`;
+
 export const TreeContainer = styled.div`
   position: relative;
   width: 100%;

@@ -124,3 +124,18 @@ export const TextContainer = styled.div`
     width: 22rem;
   }
 `;
+
+export const IframeContainer = styled.div`
+  iframe {
+    width: 1100px;
+    height: 580px;
+    border: none;
+    border-radius: 1rem;
+
+    @media (max-width: 768px) {
+      width: 350px;
+      height: 550px;
+      margin-left: 0rem;
+    }
+  }
+`;
